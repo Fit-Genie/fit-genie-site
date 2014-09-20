@@ -38,12 +38,12 @@ module.exports = function(grunt) {
       }
     },
     sass: {
-        options: {
-            sourceMap: true
-        },
         dist: {
+            options: {
+                style: 'compressed'
+            },
             files: {
-                'main.css': 'main.scss'
+                'app/css/main.css': 'app/sass/main.scss'
             }
         }
     },
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: ['css/*.scss'],
+        files: ['sass/*.scss'],
         tasks: ['sass'],
 
       },
@@ -154,13 +154,13 @@ module.exports = function(grunt) {
     }
   });
   grunt.registerTask('style', ['jshint', 'jscs']);
-  grunt.registerTask('build', ['clean:dev', 'browserify:dev', 'copy:dev']);
+  grunt.registerTask('build', ['clean:dev', 'sass' , 'browserify:dev', 'copy:dev']);
   // testing
   grunt.registerTask('angulartest', ['browserify:angulartest', 'karma:unit']);
   grunt.registerTask('angulartestwatch', ['test', 'watch:angulartest']);
   grunt.registerTask('test', ['style','angulartestwatch', 'simplemocha']);
-  grunt.registerTask('buildtest', ['test', 'build']);x
-  grunt.registerTask('default', ['watch:express']);
+  grunt.registerTask('buildtest', ['test', 'build']);
+  grunt.registerTask('default', ['build','watch:express', 'watch:css']);
 
 
   // get ready for deploy
