@@ -41,6 +41,6 @@ fitApp.config(['$routeProvider', function($routeProvider) {
       controller: 'CreateCtrl'
     })
     .otherwise({
-      redirectTo: '/login'
+      redirectTo: '/create'
     });
 }]);

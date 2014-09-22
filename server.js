@@ -7,11 +7,12 @@ var http = require('http');
 var passport = require('passport');
 var app = express();
 
-//mongoose and mongo go here
+mongoose.connect('mongodb://localhost/workouts-development');
 
 app.use(express.static(__dirname + (process.env.STATIC_DIR || '/build')));
 
 app.use(bodyparser.json());
+require('./routes/workout-routes')(app);
 
 var server = http.createServer(app);
 

@@ -20,7 +20,7 @@ module.exports = function(app) {
         return promise;
       },
       saveNewWorkout: function(workout) {
-        var promise = $http.post('/api/v_0_0_1/workouts', parseWorkout(workout))
+        var promise = $http.post('/api/v_0_0_1/workouts/', parseWorkout(workout))
           .error(function(data, status) {
             console.log('error!');
             console.log(data);
@@ -29,7 +29,7 @@ module.exports = function(app) {
         return promise;
       },
       saveOldWorkout: function(workout) {
-        var promise = $http.put('/api/v_0_0_1/workouts' + workout._id, parseWorkout(workout))
+        var promise = $http.put('/api/v_0_0_1/workouts/' + workout._id, parseWorkout(workout))
           .error(function(data, status) {
             console.log('error!');
             console.log(data);
@@ -38,8 +38,8 @@ module.exports = function(app) {
         return promise;
       },
       deleteWorkout: function(workout) {
-        var promise = $http.delete('/api/v_0_0_1/workouts' + workout._id)
-          error(function(data, status) {
+        var promise = $http.delete('/api/v_0_0_1/workouts/' + workout._id)
+          .error(function(data, status) {
             console.log('error!');
             console.log(data);
             console.log(status);

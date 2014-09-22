@@ -10,6 +10,8 @@ module.exports = function(app) {
 		// 	$scope.workout.name = $scope.workout.type = $scope.workout.duration = $scope.workout.description = '';
 		// };
 
+		console.log(workoutServer);
+
 		$scope.getAllWorkouts = function() {
 			workoutServer.index()
 				.success(function(data) {
@@ -17,8 +19,10 @@ module.exports = function(app) {
 				});
 		};
 
+		$scope.getAllWorkouts();
+
 		$scope.saveWorkout = function() {
-			workoutServer.saveWorkout($scope.newWorkout)
+			workoutServer.saveNewWorkout($scope.workout)
 			.success(function(data) {
 				$scope.workouts.push(data);
 			});
