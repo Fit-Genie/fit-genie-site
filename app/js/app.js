@@ -12,6 +12,8 @@ require('./controllers/createController')(fitApp);
 // require('./controllers/congratsController')(fitApp);
 // require('./controllers/postWorkoutController')(fitApp);
 
+require('./services/workout-server')(fitApp);
+
 fitApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/login', {

@@ -1,0 +1,14 @@
+<div ng-controller="LoginController">
+  <h3>Sign In</h3>
+  <label>Username</label>
+  <input type="text" ng-model="user.username">
+  <label>Password</label>
+  <input type="password" ng-model="user.password">
+  <button ng-click="login()">Login</button>
+
+  <form name="newuserform">
+    <input type="text" required data-ng-model="user.username" placeholder="username"/>
+    <input type="password" required data-ng-model="user.password" placeholder="password"/>
+    <button data-ng-disabled="newuserform.$invalid" data-ng-click="createNewUser()">Create New User</button>
+  </form>
+</div>

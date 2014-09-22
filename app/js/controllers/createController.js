@@ -1,13 +1,34 @@
 'use strict';
 
 module.exports = function(app) {
-	app.controller('CreateCtrl', function($scope) {
-		$scope.workouts = [
-		{name: 'test', type:'anything', duration: 5}
-		];
+	app.controller('CreateCtrl', function($scope, workoutServer) {
+		// $scope.workouts = [
+		// {name: 'test', type:'anything', duration: 5}
+		// ];
+		// $scope.saveWorkout = function() {
+		// 	$scope.workouts.push({name: $scope.workout.name, type: $scope.workout.type, duration: $scope.workout.duration, description: $scope.workout.description});
+		// 	$scope.workout.name = $scope.workout.type = $scope.workout.duration = $scope.workout.description = '';
+		// };
+
+		$scope.getAllWorkouts = function() {
+			workoutServer.index()
+				.success(function(data) {
+					$scope.workouts = data;
+				});
+		};
+
 		$scope.saveWorkout = function() {
-			$scope.workouts.push({name: $scope.workout.name, type: $scope.workout.type, duration: $scope.workout.duration, description: $scope.workout.description});
-			$scope.workout.name = $scope.workout.type = $scope.workout.duration = $scope.workout.description = '';
+			workoutServer.saveWorkout($scope.newWorkout)
+			.success(function(data) {
+				$scope.workouts.push(data);
+			});
+		};
+
+		$scope.deleteWorkout = function(workout) {
+			workoutServer.deleteWorkout(workout)
+				.success(function(data){
+					$scope.getAllWorkouts();
+				});
 		};
 
 		$scope.remove = function(workout) {
