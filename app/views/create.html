@@ -1,0 +1,21 @@
+<div ng-controller="CreateCtrl">
+	<form novalidate>
+		<input type="text" ng-model="workout.name" placeholder="exercise name" required/><br/>
+		<select ng-model="workout.type" required>
+			<option value="">Choose...</option>
+			<option value="warmup">Warmup</option>
+			<option value="core">Core Workout</option>
+			<option value="cooldown">Cooldown</option>
+		</select>
+		<input type="number" ng-model="workout.duration" placeholder="duration"/ required><br/>
+		<textarea name="info" rows="10" cols="50" ng-model="workout.description" placeholder="Info/Additional Information"></textarea>
+		<button ng-click="saveWorkout()">Add to Workout</button>
+	</form>
+
+	<div ng-repeat="workout in workouts">
+		{{workout.name}}
+		{{workout.type}}
+		{{workout.duration}}
+		{{workout.description}}<span href="" ng-click="remove(workout)">X</span>		
+	</div>
+</div>
