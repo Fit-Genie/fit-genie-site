@@ -8,7 +8,7 @@ var fitApp = angular.module('fitApp', ['ngRoute', 'base64', 'ngCookies']);
 require('./controllers/loginController')(fitApp);
 require('./controllers/preWorkoutController')(fitApp);
 require('./controllers/createController')(fitApp);
-// require('./controllers/workoutController')(fitApp);
+require('./controllers/workoutController')(fitApp);
 // require('./controllers/congratsController')(fitApp);
 // require('./controllers/postWorkoutController')(fitApp);
 
