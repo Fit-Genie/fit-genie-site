@@ -1,9 +1,11 @@
 <div ng-controller="WorkoutCtrl">
 	<div ng-repeat="workout in workouts">
 		{{workout.name}}
-		{{workout.type}}
-		{{workout.duration}}
-		{{workout.description}}		
+    <span ng-click="showDescription()">?</span>
+<!-- 		{{workout.type}}
+		{{workout.duration}} -->
+    <div class="popup">
+      {{workout.description}}
+    </div>
 	</div>
-	<div></div>
 </div>

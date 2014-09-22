@@ -1,3 +1,4 @@
+'use strict';
 require('angular/angular');
 require('angular-route');
 require('angular-cookies');
@@ -26,7 +27,7 @@ fitApp.config(['$routeProvider', function($routeProvider) {
     })
     .when('/workout', {
       templateUrl: 'views/workout.html',
-      controller: 'WorkoutController'
+      controller: 'WorkoutCtrl'
     })
     .when('/congrats', {
       templateUrl: 'views/congrats.html',
