@@ -1,6 +1,60 @@
+/* Icon font styles */
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot?gefpod');
+  src:url('../fonts/icomoon.eot?#iefixgefpod') format('embedded-opentype'),
+    url('../fonts/icomoon.woff?gefpod') format('woff'),
+    url('../fonts/icomoon.ttf?gefpod') format('truetype'),
+    url('../fonts/icomoon.svg?gefpod#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  float: right;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-happy:before {
+  content: "\e600";
+}
+.icon-smiley:before {
+  content: "\e601";
+}
+.icon-sad:before {
+  content: "\e602";
+}
+.icon-grin:before {
+  content: "\e603";
+}
+.icon-angry:before {
+  content: "\e604";
+}
+.icon-info:before {
+  content: "\e605";
+}
+.icon-cancel-circle:before {
+  content: "\e606";
+}
+
+
 /*******************************
-   Base
+Base
 ********************************/
+
+* {
+  box-sizing: border-box;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,6 +82,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
+  height: 100%;
   line-height: 1;
 }
 ol, ul {
@@ -49,6 +104,7 @@ table {
 html {
   background: url(../img/black_thread.png) repeat;
   font-family: 'Ubuntu', sans-serif;
+  height: 100%;
 }
 
 nav {
@@ -58,7 +114,7 @@ nav {
 
 
 /*******************************
-   Layout
+Layout
 ********************************/
 
 .user-login {
@@ -72,7 +128,7 @@ nav {
 
 
 /*******************************
-   Module
+Module
 ********************************/
 
 .login {
@@ -95,7 +151,7 @@ nav {
   font-family: 'Arvo', serif;
   font-size: 9rem;
   text-align: center;
-  padding: 2.6rem 0;
+  padding: 3rem 0 1rem 0;
 }
 
 .timer.warmup {
@@ -154,6 +210,34 @@ nav {
   border-top-color: #2fb3c6;
 }
 
+/* Sticky workout controls for mobile */
+
+.controls {
+  text-align: center;
+  height: 4rem;
+  color: white;
+  background: none;
+  margin-bottom: 2rem;
+}
+
+.controls-button {
+  margin: 0 auto;
+  font-size: 1.6rem;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 6px;
+  margin: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.controls-button:hover,
+.controls-button:active {
+  background: rgba(0, 0, 0, 0.6);
+  color: #82d9e5;
+}
 
 /*******************************
 State
@@ -163,7 +247,22 @@ State
   .user-login {
     display: inline;
   }
+
   .movement {
-      border-radius: 6px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .controls {
+    position: fixed;
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(70, 101, 106, 0.8);
+  }
+
+  .timer {
+    padding-bottom: 3rem;
   }
 }
