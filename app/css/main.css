@@ -1,3 +1,127 @@
+/*******************************
+   Base
+********************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  font: 100% Helvetica, sans-serif;
-  color: #333; }
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  background: url(../img/black_thread.png) repeat;
+  font-family: 'Ubuntu', sans-serif; }
+
+nav {
+  background: #82d9e5;
+  margin-bottom: 2rem; }
+
+/*******************************
+   Layout
+********************************/
+.user-login {
+  display: none;
+  width: 12rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  margin: 0.6rem 1rem 0 0; }
+
+/*******************************
+   Module
+********************************/
+.login {
+  float: right; }
+
+.logo {
+  color: #46656a;
+  font-family: 'Arvo', serif;
+  padding: 0.6rem;
+  font-size: 2rem;
+  display: inline-block; }
+
+/* General timer style, and color changes for current movement */
+.timer {
+  color: #ff8a00;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Arvo', serif;
+  font-size: 9rem;
+  text-align: center;
+  padding: 2.6rem 0; }
+
+.timer.warmup {
+  color: #ff8a00; }
+
+.timer.core {
+  color: #0ea692; }
+
+.timer.cooldown {
+  color: #2fb3c6; }
+
+/* General movement styles */
+.movement {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  color: #999;
+  color: rgba(255, 255, 255, 0.5);
+  background: darkgray;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 4px solid;
+  margin-bottom: 0.4rem;
+  padding: 1.4rem; }
+
+/* Changes background color of current movement */
+.current {
+  color: white; }
+
+.current.warmup {
+  background: rgba(255, 138, 0, 0.3); }
+
+.current.core {
+  background: rgba(255, 138, 0, 0.3); }
+
+.current.cooldown {
+  background: rgba(255, 138, 0, 0.3); }
+
+/* Border colors for different workout sections */
+.warmup {
+  border-top-color: #ff8a00; }
+
+.core {
+  border-top-color: #0ea692; }
+
+.cooldown {
+  border-top-color: #2fb3c6; }
+
+/*******************************
+State
+********************************/
+@media (min-width: 641px) {
+  .user-login {
+    display: inline; }
+  .movement {
+    border-radius: 6px; } }
