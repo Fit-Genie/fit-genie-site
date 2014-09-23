@@ -1,6 +1,51 @@
+/* Icon font styles */
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?gefpod');
+  src: url('../fonts/icomoon.eot?#iefixgefpod') format('embedded-opentype'), url('../fonts/icomoon.woff?gefpod') format('woff'), url('../fonts/icomoon.ttf?gefpod') format('truetype'), url('../fonts/icomoon.svg?gefpod#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  float: right;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-happy:before {
+  content: "\e600"; }
+
+.icon-smiley:before {
+  content: "\e601"; }
+
+.icon-sad:before {
+  content: "\e602"; }
+
+.icon-grin:before {
+  content: "\e603"; }
+
+.icon-angry:before {
+  content: "\e604"; }
+
+.icon-info:before {
+  content: "\e605"; }
+
+.icon-cancel-circle:before {
+  content: "\e606"; }
+
 /*******************************
-   Base
+Base
 ********************************/
+* {
+  box-sizing: border-box; }
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -14,6 +59,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 body {
+  height: 100%;
   line-height: 1; }
 
 ol, ul {
@@ -31,15 +77,17 @@ table {
   border-spacing: 0; }
 
 html {
-  background: url(../img/black_thread.png) repeat;
-  font-family: 'Ubuntu', sans-serif; }
+  background: url(../img/bg.png) repeat;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  height: 100%; }
 
 nav {
   background: #82d9e5;
   margin-bottom: 2rem; }
 
 /*******************************
-   Layout
+Layout
 ********************************/
 .user-login {
   display: none;
@@ -50,7 +98,7 @@ nav {
   margin: 0.6rem 1rem 0 0; }
 
 /*******************************
-   Module
+Module
 ********************************/
 .login {
   float: right; }
@@ -70,7 +118,7 @@ nav {
   font-family: 'Arvo', serif;
   font-size: 9rem;
   text-align: center;
-  padding: 2.6rem 0; }
+  padding: 3rem 0 1rem 0; }
 
 .timer.warmup {
   color: #ff8a00; }
@@ -117,6 +165,97 @@ nav {
 .cooldown {
   border-top-color: #2fb3c6; }
 
+/* Sticky workout controls for mobile */
+.controls {
+  text-align: center;
+  height: 4rem;
+  background: none;
+  margin-bottom: 2rem; }
+
+.controls-button {
+  margin: 0 auto;
+  font-size: 1.6rem;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 6px;
+  margin: 0.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  outline: none;
+  border: none;
+  color: white; }
+
+.controls-button:hover, .controls-button:active {
+  background: rgba(0, 0, 0, 0.6);
+  color: #82d9e5; }
+
+/* Workout Builder page styles */
+.workoutBuild {
+  max-width: 640px;
+  margin: 0 auto;
+  color: white;
+  line-height: 2.618rem; }
+
+.workoutBuild h1 {
+  font-size: 2.618rem;
+  line-height: 4.236rem;
+  color: #2fb3c6; }
+
+.workoutBuild h2 {
+  font-size: 1.618rem;
+  line-height: 2.628rem; }
+
+input.exercise-name {
+  width: 100%;
+  height: 1.618rem; }
+
+input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info {
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+  color: white;
+  height: 1.618rem;
+  padding: 0.382em; }
+
+.exercise-type_select {
+  display: inline-block;
+  width: 50%;
+  padding: 5px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0; }
+
+.exercise-type_container, .exercise-duration_container {
+  width: 50%;
+  height: 2.618rem;
+  display: inline-block;
+  float: left; }
+
+.exercise-duration_label {
+  display: block;
+  width: 100%;
+  clear: both; }
+
+.exercise-duration {
+  display: inline-block;
+  width: 16.18%;
+  margin: 0 0.382rem; }
+
+.exercise-info {
+  width: 100%;
+  height: 4.236rem;
+  margin-top: 0.382rem; }
+
+.btn-submit {
+  width: 100%;
+  height: 2.618rem;
+  background-color: #f4f3f3;
+  color: #46656a;
+  border: 1px solid #2fb3c6;
+  margin-bottom: 1.618rem;
+  font-size: 1rem; }
+
+.btn-submit:hover, .btn-submit:active {
+  cursor: pointer; }
+
 /*******************************
 State
 ********************************/
@@ -125,3 +264,13 @@ State
     display: inline; }
   .movement {
     border-radius: 6px; } }
+
+@media (max-width: 640px) {
+  .controls {
+    position: fixed;
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(70, 101, 106, 0.9); }
+  .timer {
+    padding-bottom: 3rem; } }
