@@ -1,3 +1,4 @@
+'use strict';
 require('angular/angular');
 require('angular-route');
 require('angular-cookies');
@@ -8,7 +9,7 @@ var fitApp = angular.module('fitApp', ['ngRoute', 'base64', 'ngCookies']);
 require('./controllers/loginController')(fitApp);
 require('./controllers/preWorkoutController')(fitApp);
 require('./controllers/createController')(fitApp);
-// require('./controllers/workoutController')(fitApp);
+require('./controllers/workoutController')(fitApp);
 // require('./controllers/congratsController')(fitApp);
 // require('./controllers/postWorkoutController')(fitApp);
 
@@ -26,7 +27,7 @@ fitApp.config(['$routeProvider', function($routeProvider) {
     })
     .when('/workout', {
       templateUrl: 'views/workout.html',
-      controller: 'WorkoutController'
+      controller: 'WorkoutCtrl'
     })
     .when('/congrats', {
       templateUrl: 'views/congrats.html',
