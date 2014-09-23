@@ -10,7 +10,6 @@ module.exports = function(app) {
 		// 	$scope.workout.name = $scope.workout.type = $scope.workout.duration = $scope.workout.description = '';
 		// };
 
-		console.log(workoutServer);
 
 		$scope.getAllWorkouts = function() {
 			workoutServer.index()
@@ -42,5 +41,7 @@ module.exports = function(app) {
 			}
 		};
 
-	})
-}
+		console.log("create");
+
+	});
+};
