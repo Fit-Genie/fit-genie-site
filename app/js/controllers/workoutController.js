@@ -11,5 +11,16 @@ module.exports = function(app) {
     };
 
     $scope.getAllWorkouts();
+
+
+    $scope.stopwatch = function(workout.duration) {
+        //setInterval(timer,1)
+        //timer
+        //decrease time by a second
+        //convert minutes into seconds
+        //when seconds are less than 0, subtract 1 from minutes
+        // add 59 to seconds.
+    };
+
   });
 };
