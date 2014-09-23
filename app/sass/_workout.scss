@@ -1,0 +1,94 @@
+/* General timer style, and color changes for current movement */
+.timer {
+  color: $pizazz;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Arvo', serif;
+  font-size: 9rem;
+  text-align: center;
+  padding: 3rem 0 1rem 0;
+}
+
+.timer.warmup {
+  color: $pizazz;
+}
+
+.timer.core {
+  color: $niagara;
+}
+
+.timer.cooldown {
+  color: $scooter;
+}
+
+/* General movement styles */
+.movement {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  color: #999;
+  color: rgba(255, 255, 255, 0.5);
+  background: $emperor;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 4px solid;
+  margin-bottom: 0.4rem;
+  padding: 1.4rem;
+}
+
+/* Changes background color of current movement */
+.current {
+  color: white;
+}
+
+.current.warmup {
+  background: rgba($pizazz, 0.3);
+}
+
+.current.core {
+  background: rgba($niagara, 0.3);
+}
+
+.current.cooldown {
+  background: rgba($scooter, 0.3);
+}
+
+/* Border colors for different workout sections */
+.warmup {
+  border-top-color: $pizazz;
+}
+
+.core {
+  border-top-color: $niagara;
+}
+
+.cooldown {
+  border-top-color: $scooter;
+}
+
+/* Sticky workout controls for mobile */
+
+.controls {
+  text-align: center;
+  height: 4rem;
+  background: none;
+  margin-bottom: 2rem;
+}
+
+.controls-button {
+  margin: 0 auto;
+  font-size: 1.6rem;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 6px;
+  margin: 0.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.controls-button:hover,
+.controls-button:active {
+  background: rgba(0, 0, 0, 0.6);
+  color: lighten($scooter, 20%);
+}
