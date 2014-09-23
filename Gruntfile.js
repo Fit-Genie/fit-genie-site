@@ -93,13 +93,11 @@ module.exports = function(grunt) {
       }
     },
     express: {
-      // options: {
-      //   port: 3000
-      // },
       dev: {
         options: {
+          port: 3000,
           script: 'server.js',
-          background: true
+          background: false
         }
       }
     },
@@ -120,7 +118,7 @@ module.exports = function(grunt) {
         files: ['app/js/**/*.js', 'app/index.html', 'app/views/**/*.html', 'server.js', 'models/*.js', 'routes/*.js'],
         tasks: ['buildtest', 'express:dev'],
         options: {
-          spawn: false
+          spawn: true
         }
       }
     },
