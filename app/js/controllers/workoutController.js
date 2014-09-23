@@ -1,26 +1,38 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('WorkoutCtrl', function($scope,workoutServer) {
+  app.controller('WorkoutCtrl', function($scope, $timeout, workoutServer) {
+
+    $scope.value;
+    $scope.minutes;
+    $scope.seconds;
+    var i = 0;
 
     $scope.getAllWorkouts = function() {
       workoutServer.index()
         .success(function(data) {
           $scope.workouts = data;
+          while()
+          $scope.value = $scope.workouts[i].duration;
+          countdown();
         });
     };
 
     $scope.getAllWorkouts();
 
+  function countdown() {
+    $scope.value--;
+    $scope.minutes = Math.floor($scope.value/60)
+    $scope.seconds = $scope.value - $scope.minutes * 60;
+    if($scope.value >= 1)
+      $scope.timeout = $timeout(countdown, 1000);
+    else
+      $scope.stop();
+  }
 
-    $scope.stopwatch = function(workout,duration) {
-        //setInterval(timer,1)
-        //timer
-        //decrease time by a second
-        //convert minutes into seconds
-        //when seconds are less than 0, subtract 1 from minutes
-        // add 59 to seconds.
-    };
+  $scope.stop = function() {
+    $timeout.cancel($scope.timeout);
+  };
 
   });
 };
