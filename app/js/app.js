@@ -10,7 +10,7 @@ require('./controllers/loginController')(fitApp);
 require('./controllers/preWorkoutController')(fitApp);
 require('./controllers/createController')(fitApp);
 require('./controllers/workoutController')(fitApp);
-// require('./controllers/congratsController')(fitApp);
+require('./controllers/congratsController')(fitApp);
 // require('./controllers/postWorkoutController')(fitApp);
 
 require('./services/workout-server')(fitApp);
