@@ -4,7 +4,7 @@
   max-width: 500px;
   margin: 0 auto;
   font-family: 'Arvo', serif;
-  font-size: 9rem;
+  font-size: $gigantic * 1.618;
   text-align: center;
   padding: 3rem 0 1rem 0;
 }
@@ -25,7 +25,7 @@
 .movement {
   max-width: 640px;
   margin: 0 auto;
-  font-size: 1.6rem;
+  font-size: $normal;
   color: #999;
   color: rgba(255, 255, 255, 0.5);
   background: $emperor;
@@ -41,14 +41,17 @@
 }
 
 .current.warmup {
+  background: darken($pizazz, 30%);
   background: rgba($pizazz, 0.3);
 }
 
 .current.core {
+  background: darken($niagara, 30%);
   background: rgba($niagara, 0.3);
 }
 
 .current.cooldown {
+  background: darken($scooter, 30%);
   background: rgba($scooter, 0.3);
 }
 
@@ -75,12 +78,12 @@
 }
 
 .controls-button {
-  margin: 0 auto;
-  font-size: 1.6rem;
+  font-size: $normal;
   width: 9rem;
   height: 3rem;
   border-radius: 6px;
   margin: 0.5rem;
+  background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.3);
   outline: none;
   border: none;
@@ -89,6 +92,7 @@
 
 .controls-button:hover,
 .controls-button:active {
+  background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.6);
   color: lighten($scooter, 20%);
 }

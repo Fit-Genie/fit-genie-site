@@ -1,0 +1,27 @@
+.congrats p {
+  text-align: center;
+  font-size: $normal;
+  margin: $large 0 $normal;
+  display: block;
+}
+
+.congrats input {
+  margin: 0 auto $normal;
+  width: 300px;
+  display: block;
+}
+
+.congrats button {
+  width: 320px;
+}
+
+.congrats textarea {
+  margin: 0 auto;
+  width: 320px;
+  text-align: left;
+  padding: $small;
+}
+
+.happy-meter {
+  width: 320px;
+}
