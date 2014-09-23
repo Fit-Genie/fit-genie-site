@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-/* Icon font styles */
-=======
->>>>>>> c219a1d0201f937eef87920313db00a0733e3bb5
 @font-face {
   font-family: 'icomoon';
   src: url('../fonts/icomoon.eot?gefpod');
@@ -43,12 +39,6 @@
 .icon-cancel-circle:before {
   content: "\e606"; }
 
-<<<<<<< HEAD
-/*******************************
-Base
-********************************/
-=======
->>>>>>> c219a1d0201f937eef87920313db00a0733e3bb5
 * {
   box-sizing: border-box; }
 
@@ -83,44 +73,10 @@ table {
   border-spacing: 0; }
 
 html {
-  background: url(../img/bg.png) repeat;
-<<<<<<< HEAD
+  background: url(../img/bg.png) repeat #999;
   font-family: 'Ubuntu', sans-serif;
   color: white;
   height: 100%; }
-
-nav {
-  background: #82d9e5;
-  margin-bottom: 2rem; }
-
-/*******************************
-Layout
-********************************/
-.user-login {
-  display: none;
-  width: 12rem;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.2rem;
-  padding: 0.2rem;
-  margin: 0.6rem 1rem 0 0; }
-
-/*******************************
-Module
-********************************/
-.login {
-  float: right; }
-
-.logo {
-  color: #46656a;
-  font-family: 'Arvo', serif;
-  padding: 0.6rem;
-  font-size: 2rem;
-  display: inline-block; }
-=======
-  font-family: 'Ubuntu', sans-serif;
-  color: white;
-  height: 100%; }
->>>>>>> c219a1d0201f937eef87920313db00a0733e3bb5
 
 /* General timer style, and color changes for current movement */
 .timer {
@@ -198,11 +154,7 @@ Module
 
 .controls-button:hover, .controls-button:active {
   background: rgba(0, 0, 0, 0.6);
-<<<<<<< HEAD
-  color: #82d9e5; }
-=======
   color: #7bd4e0; }
->>>>>>> c219a1d0201f937eef87920313db00a0733e3bb5
 
 /* Workout Builder page styles */
 .workoutBuild {
@@ -264,11 +216,7 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info {
   width: 100%;
   height: 2.618rem;
   background-color: #f4f3f3;
-<<<<<<< HEAD
-  color: #46656a;
-=======
   color: #1b6974;
->>>>>>> c219a1d0201f937eef87920313db00a0733e3bb5
   border: 1px solid #2fb3c6;
   margin-bottom: 1.618rem;
   font-size: 1rem; }
@@ -276,8 +224,6 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info {
 .btn-submit:hover, .btn-submit:active {
   cursor: pointer; }
 
-<<<<<<< HEAD
-=======
 /*******************************
 Module
 ********************************/
@@ -302,7 +248,6 @@ nav {
   font-size: 2rem;
   display: inline-block; }
 
->>>>>>> c219a1d0201f937eef87920313db00a0733e3bb5
 /*******************************
 State
 ********************************/
