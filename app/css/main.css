@@ -73,7 +73,7 @@ table {
   border-spacing: 0; }
 
 html {
-  background: url(../img/bg.png) repeat #999;
+  background: url('../img/bg.png') repeat #999;
   font-family: 'Ubuntu', sans-serif;
   color: white;
   height: 100%; }
