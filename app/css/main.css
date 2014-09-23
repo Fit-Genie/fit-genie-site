@@ -39,19 +39,23 @@
 .icon-cancel-circle:before {
   content: "\e606"; }
 
+/* Colors
+****************************/
+/* Type Size Variables
+****************************/
 * {
   box-sizing: border-box; }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, h1, h2, p, a, img, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, time {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 18px;
   font: inherit;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+footer, header, nav, section {
   display: block; }
 
 body {
@@ -61,19 +65,9 @@ body {
 ol, ul {
   list-style: none; }
 
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
 html {
-  background: url('../img/bg.png') repeat #999;
+  background: #04302b;
+  background: url(../img/bg.png) repeat;
   font-family: 'Ubuntu', sans-serif;
   color: white;
   height: 100%; }
@@ -84,7 +78,7 @@ html {
   max-width: 500px;
   margin: 0 auto;
   font-family: 'Arvo', serif;
-  font-size: 9rem;
+  font-size: 11.089772rem;
   text-align: center;
   padding: 3rem 0 1rem 0; }
 
@@ -101,7 +95,7 @@ html {
 .movement {
   max-width: 640px;
   margin: 0 auto;
-  font-size: 1.6rem;
+  font-size: 1.618rem;
   color: #999;
   color: rgba(255, 255, 255, 0.5);
   background: #545454;
@@ -115,12 +109,15 @@ html {
   color: white; }
 
 .current.warmup {
+  background: #663600;
   background: rgba(255, 138, 0, 0.3); }
 
 .current.core {
+  background: #021916;
   background: rgba(14, 166, 146, 0.3); }
 
 .current.cooldown {
+  background: #12444a;
   background: rgba(47, 179, 198, 0.3); }
 
 /* Border colors for different workout sections */
@@ -141,47 +138,35 @@ html {
   margin-bottom: 2rem; }
 
 .controls-button {
-  margin: 0 auto;
-  font-size: 1.6rem;
+  font-size: 1.618rem;
   width: 9rem;
   height: 3rem;
   border-radius: 6px;
   margin: 0.5rem;
+  background: black;
   background: rgba(0, 0, 0, 0.3);
   outline: none;
   border: none;
   color: white; }
 
 .controls-button:hover, .controls-button:active {
+  background: black;
   background: rgba(0, 0, 0, 0.6);
   color: #7bd4e0; }
 
 /* Workout Builder page styles */
-.workoutBuild {
-  max-width: 640px;
-  margin: 0 auto;
-  color: white;
-  line-height: 2.618rem; }
-
-.workoutBuild h1 {
-  font-size: 2.618rem;
-  line-height: 4.236rem;
-  color: #2fb3c6; }
-
-.workoutBuild h2 {
-  font-size: 1.618rem;
-  line-height: 2.628rem; }
-
-input.exercise-name {
+input.exercise-name, input.workout-name {
   width: 100%;
   height: 1.618rem; }
 
-input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info {
+input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, input.workout-name {
+  background: white;
   background: rgba(255, 255, 255, 0.2);
   border: 0;
   color: white;
   height: 1.618rem;
-  padding: 0.382em; }
+  padding: 0.382em;
+  font-size: 1rem; }
 
 .exercise-type_select {
   display: inline-block;
@@ -194,7 +179,6 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info {
 .exercise-type_container, .exercise-duration_container {
   width: 50%;
   height: 2.618rem;
-  display: inline-block;
   float: left; }
 
 .exercise-duration_label {
@@ -204,7 +188,7 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info {
 
 .exercise-duration {
   display: inline-block;
-  width: 16.18%;
+  width: 23%;
   margin: 0 0.382rem; }
 
 .exercise-info {
@@ -212,17 +196,43 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info {
   height: 4.236rem;
   margin-top: 0.382rem; }
 
-.btn-submit {
+.btn-submit, .btn-submit-inactive {
   width: 100%;
   height: 2.618rem;
   background-color: #f4f3f3;
   color: #1b6974;
   border: 1px solid #2fb3c6;
-  margin-bottom: 1.618rem;
+  margin: 1rem 0;
   font-size: 1rem; }
+
+.btn-submit-inactive {
+  background-color: #aba3a3; }
 
 .btn-submit:hover, .btn-submit:active {
   cursor: pointer; }
+
+.congrats p {
+  text-align: center;
+  font-size: 1.618rem;
+  margin: 2.618rem 0 1.618rem;
+  display: block; }
+
+.congrats input {
+  margin: 0 auto 1.618rem;
+  width: 300px;
+  display: block; }
+
+.congrats button {
+  width: 320px; }
+
+.congrats textarea {
+  margin: 0 auto;
+  width: 320px;
+  text-align: left;
+  padding: 1rem; }
+
+.happy-meter {
+  width: 320px; }
 
 /*******************************
 Module
@@ -234,9 +244,9 @@ nav {
 .user-login {
   display: none;
   width: 12rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.2rem;
-  margin: 0.6rem 1rem 0 0; }
+  margin: 1rem 1rem 0 0; }
 
 .login {
   float: right; }
@@ -244,9 +254,48 @@ nav {
 .logo {
   color: #1b6974;
   font-family: 'Arvo', serif;
-  padding: 0.6rem;
-  font-size: 2rem;
+  padding: 0 0.8rem;
+  font-size: 1.618rem;
   display: inline-block; }
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  color: white;
+  line-height: 2.618rem; }
+
+.centered {
+  margin: 0 auto;
+  text-align: center; }
+
+.btn-submit {
+  width: 100%;
+  height: 2.618rem;
+  background-color: #f4f3f3;
+  color: #1b6974;
+  border: 1px solid #2fb3c6;
+  margin: 1rem 0;
+  font-size: 1rem; }
+
+.btn-submit-inactive {
+  background-color: #aba3a3; }
+
+.btn-submit:hover, .btn-submit:active {
+  background: #796f6f;
+  background: rgba(244, 243, 243, 0.5);
+  color: white;
+  cursor: pointer; }
+
+/* Heading & Text Style
+****************************/
+h1 {
+  font-size: 2.618rem;
+  line-height: 4.236rem;
+  color: #2fb3c6; }
+
+h2 {
+  font-size: 1.618rem;
+  line-height: 2.618rem; }
 
 /*******************************
 State
@@ -263,6 +312,9 @@ State
     margin: 0;
     bottom: 0;
     width: 100%;
+    background: black;
     background: rgba(70, 101, 106, 0.9); }
+  .controls-button {
+    border-radius: 0; }
   .timer {
     padding-bottom: 3rem; } }
