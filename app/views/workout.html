@@ -1,10 +1,10 @@
 <div ng-controller="WorkoutCtrl">
+	<p>{{minutes}}minutes {{seconds}} seconds</p>
 	<div ng-repeat="workout in workouts">
 		{{workout.name}}
     <span ng-click="showDescription()">?</span>
 <!-- 		{{workout.type}}
 		{{workout.duration}} -->
-	<p>{{minutes}}minutes {{seconds}} seconds</p>
     <div class="popup">
       {{workout.description}}
     </div>

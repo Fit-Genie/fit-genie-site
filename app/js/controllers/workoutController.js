@@ -6,20 +6,20 @@ module.exports = function(app) {
     $scope.value;
     $scope.minutes;
     $scope.seconds;
+    $scope.workouts;
     var i = 0;
 
     $scope.getAllWorkouts = function() {
       workoutServer.index()
         .success(function(data) {
           $scope.workouts = data;
-          while()
           $scope.value = $scope.workouts[i].duration;
           countdown();
         });
     };
 
     $scope.getAllWorkouts();
-
+  
   function countdown() {
     $scope.value--;
     $scope.minutes = Math.floor($scope.value/60)
@@ -31,6 +31,7 @@ module.exports = function(app) {
   }
 
   $scope.stop = function() {
+    $scope.workouts.shift();
     $timeout.cancel($scope.timeout);
   };
 
