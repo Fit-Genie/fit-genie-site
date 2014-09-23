@@ -1,136 +1,22 @@
-/* Icon font styles */
-@font-face {
-  font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot?gefpod');
-  src:url('../fonts/icomoon.eot?#iefixgefpod') format('embedded-opentype'),
-    url('../fonts/icomoon.woff?gefpod') format('woff'),
-    url('../fonts/icomoon.ttf?gefpod') format('truetype'),
-    url('../fonts/icomoon.svg?gefpod#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  float: right;
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-happy:before {
-  content: "\e600";
-}
-.icon-smiley:before {
-  content: "\e601";
-}
-.icon-sad:before {
-  content: "\e602";
-}
-.icon-grin:before {
-  content: "\e603";
-}
-.icon-angry:before {
-  content: "\e604";
-}
-.icon-info:before {
-  content: "\e605";
-}
-.icon-cancel-circle:before {
-  content: "\e606";
-}
-
-
-/*******************************
-Base
-********************************/
-
-* {
-  box-sizing: border-box;
-}
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  height: 100%;
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-html {
-  background: url(../img/bg.png) repeat;
-  font-family: 'Ubuntu', sans-serif;
-  color: white;
-  height: 100%;
-}
-
-nav {
-  background: #82d9e5;
-  margin-bottom: 2rem;
-}
-
-
-/*******************************
-Layout
-********************************/
-
-.user-login {
-  display: none;
-  width: 12rem;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.2rem;
-  padding: 0.2rem;
-  margin: 0.6rem 1rem 0 0;
-}
-
+@import "icon-fonts";
+@import "reset";
+@import "colors";
 
 /*******************************
 Module
 ********************************/
+nav {
+  background: lighten($scooter, 20%);
+  margin-bottom: 2rem;
+}
+
+.user-login {
+  display: none;
+  width: 12rem;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  margin: 0.6rem 1rem 0 0;
+}
 
 .login {
   float: right;
@@ -146,7 +32,7 @@ Module
 
 /* General timer style, and color changes for current movement */
 .timer {
-  color: #ff8a00;
+  color: $pizazz;
   max-width: 500px;
   margin: 0 auto;
   font-family: 'Arvo', serif;
@@ -156,11 +42,11 @@ Module
 }
 
 .timer.warmup {
-  color: #ff8a00;
+  color: $pizazz;
 }
 
 .timer.core {
-  color: #0ea692;
+  color: $niagara;
 }
 
 .timer.cooldown {
@@ -174,7 +60,7 @@ Module
   font-size: 1.6rem;
   color: #999;
   color: rgba(255, 255, 255, 0.5);
-  background: darkgray;
+  background: $emperor;
   background: rgba(0, 0, 0, 0.3);
   border-top: 4px solid;
   margin-bottom: 0.4rem;
@@ -187,28 +73,28 @@ Module
 }
 
 .current.warmup {
-  background: rgba(255, 138, 0, 0.3);
+  background: rgba($pizazz, 0.3);
 }
 
 .current.core {
-  background: rgba(255, 138, 0, 0.3);
+  background: rgba($niagara, 0.3);
 }
 
 .current.cooldown {
-  background: rgba(255, 138, 0, 0.3);
+  background: rgba($scooter, 0.3);
 }
 
 /* Border colors for different workout sections */
 .warmup {
-  border-top-color: #ff8a00;
+  border-top-color: $pizazz;
 }
 
 .core {
-  border-top-color: #0ea692;
+  border-top-color: $niagara;
 }
 
 .cooldown {
-  border-top-color: #2fb3c6;
+  border-top-color: $scooter;
 }
 
 /* Sticky workout controls for mobile */
@@ -236,7 +122,7 @@ Module
 .controls-button:hover,
 .controls-button:active {
   background: rgba(0, 0, 0, 0.6);
-  color: #82d9e5;
+  color: lighten($scooter, 20%);
 }
 
 /* Workout Builder page styles */
