@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-  app.controller('WorkoutCtrl', function($scope) {
+  app.controller('CongratsController', function($scope) {
 
   });
 };
