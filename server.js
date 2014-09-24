@@ -4,6 +4,7 @@ var express = require('express');
 var bodyparser = require('body-parser');
 var mongoose = require('mongoose');
 var http = require('http');
+var passport = require('passport');
 var app = express();
 
 mongoose.connect('mongodb://localhost/workouts-development');
