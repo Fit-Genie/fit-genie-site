@@ -1,10 +1,11 @@
-<div ng-controller="LoginController">
-  <h3>Sign In</h3>
+<div ng-controller="LoginController" class="container">
+  <h1 class="centered">FitGenie</h1>
+  <h2 class="centered">Sign In</h2>
   <label>Username</label>
   <input type="text" ng-model="user.username">
   <label>Password</label>
   <input type="password" ng-model="user.password">
-  <button ng-click="login()">Login</button>
-
-  <a href="/#/signup">Signup</a>
+  <button ng-click="login()" class="btn-submit">Login</button>
+</div>
+<a href="/#/signup" class="signup-link">Create a New Account</a>
 </div>
