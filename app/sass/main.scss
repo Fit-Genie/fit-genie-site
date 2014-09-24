@@ -53,21 +53,21 @@ nav {
 .btn-submit {
   width: 100%;
   height: 2.618rem;
-  background-color: #f4f3f3;
-  color: darken($scooter, 20%);
+  background-color: $dark-niagara;
+  color: #FFF;
   border: 1px solid #2fb3c6;
   margin: $small 0;
   font-size: $small;
 }
 
 .btn-submit-inactive {
-  background-color: darken(#f4f3f3, 30%);
+  background-color: darken($dark-niagara, 15%);
 }
 
 .btn-submit:hover,
 .btn-submit:active {
-  background: darken($wild-sand, 50%);
-  background: rgba(244, 243, 243, 0.5);
+  background: darken($dark-niagara, 10%);
+  background: rgba($dark-niagara, 0.5);
   color: white;
   cursor: pointer;
 }
@@ -99,7 +99,7 @@ h2 {
 /*******************************
 State
 ********************************/
-
+// Larger Screens
 @media (min-width: 641px) {
   .signup form {
     margin-left: 6rem;
@@ -112,8 +112,25 @@ State
   .movement {
     border-radius: 6px;
   }
+
+  // WORKOUT BUILDER //
+  // Sizing for Divs around Exercise Type and Duration
+  .exercise-type_container,
+  .exercise-duration_container {
+    width: 47%;
+    margin: 0 4px;
+    float: left;
+    display: inline-block;
+    clear: none;
+  }
+  .exercise-type_select{
+
+  }
+
+
 }
 
+// Mobile - Smaller Screens
 @media (max-width: 640px) {
   .controls {
     position: fixed;
