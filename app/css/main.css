@@ -211,6 +211,15 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 .btn-submit:hover, .btn-submit:active {
   cursor: pointer; }
 
+<<<<<<< HEAD
+.profile {
+  width: 6.854rem; }
+
+.incomplete-form {
+  border: 1px solid #ff8a00; }
+
+=======
+>>>>>>> ee245e6da84f7e0bcc9e4f29be0884699900d58b
 .congrats p {
   text-align: center;
   font-size: 1.618rem;
@@ -234,6 +243,60 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 .happy-meter {
   width: 320px; }
 
+<<<<<<< HEAD
+.calendar {
+  width: 100%;
+  border-spacing: 0;
+  margin: 1.618rem 0; }
+
+.calendar tr, th, td {
+  border-top: 1px solid #0ea692;
+  width: 14%;
+  padding-top: 0;
+  text-align: center;
+  vertical-align: top;
+  font-size: 1rem; }
+
+.calendar td {
+  height: 6.854rem; }
+
+.calendar th {
+  color: #FFF;
+  height: 1.618rem;
+  border: 0;
+  background: #06483f;
+  background: rgba(14, 166, 146, 0.2); }
+
+.calendar-today {
+  background: #06483f;
+  background: rgba(14, 166, 146, 0.2); }
+
+.data {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 2.618rem; }
+
+.track-none {
+  border: 2px solid #000;
+  width: 45%;
+  height: 40%;
+  border-radius: 50%; }
+
+.track-whole {
+  color: #0ea692; }
+
+.track-partial {
+  color: #258f9d; }
+
+.track-zero {
+  color: #ff8a00; }
+
+.track-future {
+  color: rgba(47, 179, 198, 0.5); }
+
+=======
+>>>>>>> ee245e6da84f7e0bcc9e4f29be0884699900d58b
 /*******************************
 Module
 ********************************/

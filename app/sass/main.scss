@@ -1,9 +1,14 @@
 @import "icon-fonts";
 @import "theme";
 @import "reset";
+@import "login";
+@import "signup";
+@import "congratulations";
+@import "track";
 @import "workout";
 @import "create";
 @import "congratulations";
+
 
 /*******************************
 Module
@@ -67,6 +72,16 @@ nav {
   cursor: pointer;
 }
 
+input {
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+  color: white;
+  height: $normal;
+  padding: $tiny;
+  font-size: $small;
+}
+
 /* Heading & Text Style
 ****************************/
 
@@ -86,6 +101,10 @@ State
 ********************************/
 
 @media (min-width: 641px) {
+  .signup form {
+    margin-left: 6rem;
+  }
+
   .user-login {
     display: inline;
   }
