@@ -31,7 +31,7 @@ module.exports = function(app) {
 
 		$scope.deleteWorkout = function(workout) {
 			workoutServer.deleteWorkout(workout)
-				.success(function(data){
+				.success(function(){
 					$scope.getAllWorkouts();
 				});
 		};
@@ -42,8 +42,6 @@ module.exports = function(app) {
 				$scope.workouts.splice(index, 1);
 			}
 		};
-
-		console.log("create");
 
 	});
 };

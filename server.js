@@ -11,6 +11,7 @@ mongoose.connect('mongodb://localhost/workouts-development');
 
 app.use(express.static(__dirname + (process.env.STATIC_DIR || '/build')));
 
+
 app.set('jwtTokenSecret', process.env.JWT_SECRET || 'developmentsecret')
 app.set('secret', process.env.SECRET || 'developmentsecret')
 

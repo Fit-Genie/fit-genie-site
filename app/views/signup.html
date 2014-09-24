@@ -1,11 +1,42 @@
-  <div ng-controller="LoginController">
-
-  <form name="newuserform">
-    <input type="text" required data-ng-model="user.username" placeholder="username"/>
-    <input type="password" required data-ng-model="user.password" placeholder="password"/>
-    <input type="password" required data-ng-model="user.passwordConfirmation" placeholder="password confirmation"/>
-    <button data-ng-disabled="newuserform.$invalid" data-ng-click="createNewUser()">Create New User</button>
-   	<p><span ng-bind="message"></span></p>
-  </form>
-
-  <div>
+  <div ng-controller="LoginController" class="signup container">
+    <h1 class="centered">Create A New Account</h1>
+    <form name="newuserform">
+      <fieldset>
+        <div class="line">
+          <label>Login</label>
+          <input type="text" required data-ng-model="user.username" placeholder="username"/>
+        </div>
+        <div class="line">
+          <label>Password</label>
+          <input type="password" required data-ng-model="user.password" placeholder="password"/>
+        </div>
+        <div class="line">
+          <label>Confirm Password</label>
+          <input type="password" required data-ng-model="user.passwordConfirmation" placeholder="password confirmation"/>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="line">
+          <label>First Name</label>
+          <input type="text">
+        </div>
+        <div class="line">
+          <label>Last Name</label>
+          <input type="text">
+        </div>
+        <div class="line">
+          <label>Birthday</label>
+          <input type="birthday" placeholder="mm-dd-yyyy">
+        </div>
+        <div class="line">
+          <label>E-mail Address</label>
+          <input type="email">
+        </div>
+      </fieldset>
+      <div class="line">
+        <label for=""></label>
+        <button data-ng-disabled="newuserform.$invalid" data-ng-click="createNewUser()" class="btn-submit">Create New User</button>
+        <p><span ng-bind="message"></span></p>
+      </div>
+    </form>
+  </div>

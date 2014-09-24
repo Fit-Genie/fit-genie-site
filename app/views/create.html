@@ -1,17 +1,62 @@
 <div ng-controller="CreateCtrl">
-	<form id="workoutBuild" novalidate>
-		<h1>Workout Builder</h1>
-		<h2>Add New Exercise</h2>
-		<input type="text" ng-model="workout.name" placeholder="Exercise Name" class="exercise-name" required/>
-		<div class="exercise-type_container">
-			<label class="exercise-type_label">Type</label>
-			<select ng-model="workout.type" class="exercise-type_select"  required>
-				<option value="">Choose...</option>
-				<option value="warmup">Warm Up</option>
-				<option value="core">Core</option>
-				<option value="cooldown">Cool Down</option>
-			</select>
+	<section class="container">
+		<form id="workoutBuild" novalidate>
+			<h1>
+				Workout Builder
+			</h1>
+			<h2>
+				Add New Exercise
+			</h2>
+			<input type="text" ng-model="workout.name" placeholder="Exercise Name *" class="exercise-name" required/>
+			<div class="exercise-type_container">
+				<label class="exercise-type_label">
+					Type *
+				</label>
+				<select ng-model="workout.type" class="exercise-type_select"  required>
+					<option value="">
+						Choose...
+					</option>
+					<option value="warmup">
+						Warm Up
+					</option>
+					<option value="core">
+						Core
+					</option>
+					<option value="cooldown">
+						Cool Down
+					</option>
+				</select>
+			</div>
+			<div class="exercise-duration_container">
+				<label class="exercise-duration_label">
+					Duration (min:sec) *
+				</label>
+				<div class="exercise_durations">
+					<input ng-model="workout.duration" id="exercise-duration_min" name="exercise-duration_min" type="number" placeholder="min" class="exercise-duration" required maxlength="2"><input ng-model="workout.duration" id="exercise-duration_sec" name="exercise-duration_sec" type="number" placeholder="sec" class="exercise-duration" required maxlength="2">
+				</div>
+			</div>
+			<textarea name="info" ng-model="workout.description" class="exercise-info" placeholder="Additional Information">
+			</textarea>
+			<button ng-click="saveWorkout()" type="submit" class="btn-submit">
+				Add to Workout
+			</button>
+			<p>
+				* - Denotes Required Field
+			</p>
+		</form>
+		<h2>
+			Movement Set
+		</h2>
+		<div ng-repeat="workout in workouts" class="movement {{workout.type}}">
+			<span>
+				{{workout.name}}
+			</span>
+			<!--	{{workout.duration}} min |
+			{{workout.description}} -->
+			<span href="" ng-click="deleteWorkout(workout)" class="icon-cancel-circle">
+			</span>
 		</div>
+<<<<<<< HEAD
 		<div class="exercise-duration_container"
 			<label class="exercise-duration_label">Duration</label>
 			<input type="number" ng-model="workout.minutes" placeholder="minutes"/ class="exercise-duration"required>
@@ -34,5 +79,18 @@
         <button type="submit" class="btn-submit">Save Your Workout</button>
       </a>
     </form>
+=======
+		<form id="workoutName">
+	      <h2>
+	      	Save Workout
+	      </h2>
+	      <a href="#">
+	        <button type="submit" class="btn-submit">
+	        	Save Your Workout
+	        </button>
+	      </a>
+	  </form>
+  </section>
+>>>>>>> a97873c2f1344c8c0e7855ceb6be0536fff33add
 </div>
 

@@ -9,11 +9,12 @@
     "beforeEach" : false,
     "after"      : false,
     "afterEach"  : false,
-    "equal"      : false
+    "equal"      : false,
+    "angular"    : false
   },
-  "jquery": true,
+  "node": true,
   "globalstrict": true,
-  "quotmark": true,
+  "quotmark": "single",
   "smarttabs": true,
   "trailing": true,
   "undef": true,
