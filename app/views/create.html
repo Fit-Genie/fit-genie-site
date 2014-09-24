@@ -14,7 +14,8 @@
 		</div>
 		<div class="exercise-duration_container"
 			<label class="exercise-duration_label">Duration</label>
-			<input type="number" ng-model="workout.duration" placeholder="Duration"/ class="exercise-duration"required>
+			<input type="number" ng-model="workout.minutes" placeholder="minutes"/ class="exercise-duration"required>
+			<input type="number" ng-model="workout.seconds" placeholder="seconds"/ class="exercise-duration"required>
 		</div>
 		<textarea name="info" ng-model="workout.description" class="exercise-info" placeholder="Additional Information"></textarea>
 		<button ng-click="saveWorkout()" type="submit" class="btn-submit">Add to Workout</button>
@@ -23,7 +24,8 @@
 	<div ng-repeat="workout in workouts">
 		{{workout.name}}
 		{{workout.type}}
-		{{workout.duration}}
+		{{workout.minutes}}
+		{{workout.seconds}}
 		{{workout.description}}<span href="" ng-click="deleteWorkout(workout)">X</span>
 	</div>
 	<form id="workoutName">

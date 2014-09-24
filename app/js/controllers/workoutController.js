@@ -11,9 +11,12 @@ module.exports = function(app) {
           //var i = $scope.workouts.length;
          // var foo = $scope.workouts;
          // while(i>0) {
-            console.log($scope.workouts.length);
-            var value = $scope.workouts[0].duration;
-            $scope.countdown(value);
+            console.log($scope.workouts);
+            var min = $scope.workouts[0].minutes;
+            var sec = $scope.workouts[0].seconds;
+            var total = sec + min*60
+            console.log(total);
+            $scope.countdown(total);
             //i--;
         //}
         });
@@ -21,30 +24,32 @@ module.exports = function(app) {
 
     $scope.getAllWorkouts();
   
-  $scope.countdown = function(value) {
-    if(value > -1) {
-      $scope.minutes = Math.floor(value/60)
-      if(value < 10) {
-        var sec = value - $scope.minutes * 60
+  $scope.countdown = function(total) {
+      if(total > -1) {
+      $scope.minutes = Math.floor(total/60)
+      if(total < 10) {
+        var sec = total - $scope.minutes * 60
         $scope.seconds = "0" + sec;
       }
-      else 
-        $scope.seconds = value - $scope.minutes * 60;
+      else
+        $scope.seconds = total - $scope.minutes * 60;
     }
-    value--;
-    if(value >= -1)
-      $scope.timeout = $timeout(function(){$scope.countdown(value)}, 1000);
-    if(value === -2) {
+    total--;
+    if(total >= -1)
+      $scope.timeout = $timeout(function(){$scope.countdown(total)}, 1000);
+    if(total === -2) {
       $scope.workouts.shift();
-      if($scope.workouts.length !== 0)
-        var time = $scope.workouts[0].duration;
-      $scope.countdown(time);
+      if($scope.workouts.length !== 0) {
+         var min = $scope.workouts[0].minutes;
+          var sec = $scope.workouts[0].seconds;
+          var total = sec + min*60;
+      }
+      $scope.countdown(total);
     }
   }
 
 
-  $scope.stop = function() {
-    console.log($scope.workouts.shift());
+  $scope.pause = function() {
     $timeout.cancel($scope.timeout);
   };
 
