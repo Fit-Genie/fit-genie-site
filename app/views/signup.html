@@ -1,0 +1,9 @@
+  <div ng-controller="LoginController">
+
+  <form name="newuserform">
+    <input type="text" required data-ng-model="user.username" placeholder="username"/>
+    <input type="password" required data-ng-model="user.password" placeholder="password"/>
+    <button data-ng-disabled="newuserform.$invalid" data-ng-click="createNewUser()">Create New User</button>
+  </form>
+
+  <div>
