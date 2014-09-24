@@ -211,12 +211,15 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 .btn-submit:hover, .btn-submit:active {
   cursor: pointer; }
 
+<<<<<<< HEAD
 .profile {
   width: 6.854rem; }
 
 .incomplete-form {
   border: 1px solid #ff8a00; }
 
+=======
+>>>>>>> ee245e6da84f7e0bcc9e4f29be0884699900d58b
 .congrats p {
   text-align: center;
   font-size: 1.618rem;
@@ -240,6 +243,7 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 .happy-meter {
   width: 320px; }
 
+<<<<<<< HEAD
 .calendar {
   width: 100%;
   border-spacing: 0;
@@ -291,6 +295,8 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 .track-future {
   color: rgba(47, 179, 198, 0.5); }
 
+=======
+>>>>>>> ee245e6da84f7e0bcc9e4f29be0884699900d58b
 /*******************************
 Module
 ********************************/
