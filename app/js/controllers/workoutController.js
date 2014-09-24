@@ -19,7 +19,7 @@ module.exports = function(app) {
     };
 
     $scope.getAllWorkouts();
-  
+
   function countdown() {
     $scope.value--;
     $scope.minutes = Math.floor($scope.value/60)

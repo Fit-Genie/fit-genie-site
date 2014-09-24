@@ -1,3 +1,4 @@
+'use strict';
 module.exports = function(app) {
   app.controller('LoginController', function($scope, $http, $base64, $cookies, $location) {
     $scope.login = function() {
@@ -11,7 +12,7 @@ module.exports = function(app) {
       }).error(function(data) {
         console.log(data);
       });
-    }
+    };
 
     $scope.createNewUser = function() {
       console.log('clicked');
@@ -31,4 +32,4 @@ module.exports = function(app) {
     };
 
   });
-}
+};
