@@ -1,12 +1,18 @@
 <div ng-controller="WorkoutCtrl">
-	<p>{{minutes}}minutes {{seconds}} seconds</p>
-	<div ng-repeat="workout in workouts">
-		{{workout.name}}
-    <span ng-click="showDescription()">?</span>
-<!-- 		{{workout.type}}
+	<section class="timer">
+		<p>{{minutes}}:{{seconds}}</p>
+	</section>
+	<div class="controls">
+		<button class="controls-button">Pause</button>
+		<button class="controls-button">Cancel</button>
+	</div>
+	<div ng-repeat="workout in workouts" class="movement {{workout.type}}">
+		<span>{{workout.name}}</span>
+		<span ng-click="showDescription()">?</span>
+		<!-- 		{{workout.type}}
 		{{workout.duration}} -->
-    <div class="popup">
-      {{workout.description}}
-    </div>
+		<span class="icon-info">
+			<span>{{workout.description}}</span>
+		</span>
 	</div>
 </div>

@@ -39,9 +39,27 @@
 .icon-angry:before {
   content: "\e604";
 }
+
+.icon-info {
+  position: relative;
+}
+.icon-info span {
+  display: none;
+}
+.icon-info:hover span,
+.icon-info:active span {
+  display: block;
+  position: absolute;
+  top: -1rem;
+  right: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 6px;
+}
 .icon-info:before {
   content: "\e605";
 }
+
 .icon-cancel-circle:before {
   content: "\e606";
 }
