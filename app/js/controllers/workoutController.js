@@ -20,11 +20,17 @@ module.exports = function(app) {
     };
 
     $scope.getAllWorkouts();
-  
+
+
   $scope.countdown = function(value) {
     if(value > -1) {
       $scope.minutes = Math.floor(value/60)
-      $scope.seconds = value - $scope.minutes * 60;
+      if(value < 10) {
+        var sec = value - $scope.minutes * 60
+        $scope.seconds = "0" + sec;
+      }
+      else
+        $scope.seconds = value - $scope.minutes * 60;
     }
     value--;
     if(value >= -1)

@@ -1,46 +1,42 @@
   <div ng-controller="LoginController" class="signup container">
     <h1 class="centered">Create A New Account</h1>
     <form name="newuserform">
-
-      <!-- Initial input (just saved in case i break something)
-      <input type="text" required data-ng-model="user.username" placeholder="username"/>
-      <input type="password" required data-ng-model="user.password" placeholder="password"/> -->
       <fieldset>
         <div class="line">
-          <label for="username">Login</label>
+          <label>Login</label>
           <input type="text" required data-ng-model="user.username" placeholder="username"/>
         </div>
         <div class="line">
-          <label for="password">Password</label>
+          <label>Password</label>
           <input type="password" required data-ng-model="user.password" placeholder="password"/>
         </div>
         <div class="line">
-          <label for="password-confirm">Confirm Password</label>
-          <input id="password-confirm" type="password" placeholder="confirm password">
+          <label>Confirm Password</label>
+          <input type="password" required data-ng-model="user.passwordConfirmation" placeholder="password confirmation"/>
         </div>
       </fieldset>
       <fieldset>
         <div class="line">
-          <label for="name-first">First Name</label>
-          <input id="name-first" type="text">
+          <label>First Name</label>
+          <input type="text">
         </div>
         <div class="line">
-          <label for="name-last">Last Name</label>
-          <input id="name-last" type="text">
+          <label>Last Name</label>
+          <input type="text">
         </div>
         <div class="line">
-          <label for="birthday">Birthday</label>
-          <input id="birthday" type="birthday" placeholder="mm-dd-yyyy">
+          <label>Birthday</label>
+          <input type="birthday" placeholder="mm-dd-yyyy">
         </div>
         <div class="line">
-          <label for="email">E-mail Address</label>
-          <input id="email" type="email">
+          <label>E-mail Address</label>
+          <input type="email">
         </div>
       </fieldset>
       <div class="line">
         <label for=""></label>
         <button data-ng-disabled="newuserform.$invalid" data-ng-click="createNewUser()" class="btn-submit">Create New User</button>
+        <p><span ng-bind="message"></span></p>
       </div>
     </form>
-
   </div>

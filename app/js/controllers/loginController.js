@@ -23,11 +23,13 @@ module.exports = function(app) {
       });
     };
 
+
     $scope.validatePassword = function() {
-      return $scope.user.password === $scope.user.passwordConfirmation;
+        return $scope.user.password === $scope.user.passwordConfirmation;
     };
 
     $scope.createNewUser = function() {
+      if($scope.validatePassword() === true) {
       console.log('clicked');
       $http({
         method: 'POST',
@@ -42,6 +44,10 @@ module.exports = function(app) {
         console.log('error');
         console.log(data);
       });
+    }
+    else
+      $scope.message = 'passwords do not match';
+
     };
   });
 };
