@@ -1,6 +1,7 @@
 'use strict';
 module.exports = function(app) {
-  app.controller('CongratsController', function($scope) {
+  app.controller('CongratsControllerø', function() {
+
 
   });
 };

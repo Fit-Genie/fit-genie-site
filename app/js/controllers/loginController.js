@@ -47,7 +47,7 @@ module.exports = function(app) {
     }
     else
       $scope.message = 'passwords do not match';
-    
+
     };
   });
 };

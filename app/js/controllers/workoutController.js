@@ -20,7 +20,8 @@ module.exports = function(app) {
     };
 
     $scope.getAllWorkouts();
-  
+
+
   $scope.countdown = function(value) {
     if(value > -1) {
       $scope.minutes = Math.floor(value/60)
@@ -28,7 +29,7 @@ module.exports = function(app) {
         var sec = value - $scope.minutes * 60
         $scope.seconds = "0" + sec;
       }
-      else 
+      else
         $scope.seconds = value - $scope.minutes * 60;
     }
     value--;

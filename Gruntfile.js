@@ -1,7 +1,6 @@
 'use strict';
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
-
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-simple-mocha');
@@ -14,6 +13,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-jscs');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-concurrent');
+  require('load-grunt-tasks')(grunt);
 
 
   var allJavascriptFilePaths = ['app/js/**/*.js', 'models/**/*.js', 'routes/**/*/js', 'server.js'];
@@ -103,8 +104,8 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: ['sass/*.scss'],
-        tasks: ['sass'],
+        files: ['app/sass/*.scss'],
+        tasks: ['sass','build'],
 
       },
       angulartest: {
@@ -149,6 +150,14 @@ module.exports = function(grunt) {
           dest: 'dist/css/'
         }]
       }
+    },
+    concurrent: {
+        watching: {
+            tasks: ['watch:express', 'watch:css', 'express:dev'],
+            options: {
+                logConcurrentOutput: true
+            }
+        }
     }
   });
   grunt.registerTask('style', ['jshint', 'jscs']);
@@ -158,7 +167,7 @@ module.exports = function(grunt) {
   grunt.registerTask('angulartestwatch', ['test', 'watch:angulartest']);
   grunt.registerTask('test', ['style','angulartestwatch', 'simplemocha']);
   grunt.registerTask('buildtest', ['test', 'build']);
-  grunt.registerTask('default', ['build','watch:express', 'watch:css']);
+  grunt.registerTask('default', ['build','concurrent:watching']);
 
 
   // get ready for deploy
