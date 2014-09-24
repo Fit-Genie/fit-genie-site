@@ -1,37 +1,51 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('WorkoutCtrl', function($scope, $timeout, workoutServer) {
-
-    $scope.value;
-    $scope.minutes;
-    $scope.seconds;
-    $scope.workouts;
-    var i = 0;
+  app.controller('WorkoutCtrl', function($scope, $timeout, workoutServer, $cookies, $http) {
+    $http.defaults.headers.common['jwt'] = $cookies.jwt;
 
     $scope.getAllWorkouts = function() {
       workoutServer.index()
         .success(function(data) {
           $scope.workouts = data;
-          $scope.value = $scope.workouts[i].duration;
-          countdown();
+          //var i = $scope.workouts.length;
+         // var foo = $scope.workouts;
+         // while(i>0) {
+            console.log($scope.workouts.length);
+            var value = $scope.workouts[0].duration;
+            $scope.countdown(value);
+            //i--;
+        //}
         });
     };
 
     $scope.getAllWorkouts();
 
-  function countdown() {
-    $scope.value--;
-    $scope.minutes = Math.floor($scope.value/60)
-    $scope.seconds = $scope.value - $scope.minutes * 60;
-    if($scope.value >= 1)
-      $scope.timeout = $timeout(countdown, 1000);
-    else
-      $scope.stop();
+
+  $scope.countdown = function(value) {
+    if(value > -1) {
+      $scope.minutes = Math.floor(value/60)
+      if(value < 10) {
+        var sec = value - $scope.minutes * 60
+        $scope.seconds = "0" + sec;
+      }
+      else
+        $scope.seconds = value - $scope.minutes * 60;
+    }
+    value--;
+    if(value >= -1)
+      $scope.timeout = $timeout(function(){$scope.countdown(value)}, 1000);
+    if(value === -2) {
+      $scope.workouts.shift();
+      if($scope.workouts.length !== 0)
+        var time = $scope.workouts[0].duration;
+      $scope.countdown(time);
+    }
   }
 
+
   $scope.stop = function() {
-    $scope.workouts.shift();
+    console.log($scope.workouts.shift());
     $timeout.cancel($scope.timeout);
   };
 

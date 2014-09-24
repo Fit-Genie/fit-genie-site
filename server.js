@@ -11,10 +11,17 @@ mongoose.connect('mongodb://localhost/workouts-development');
 app.use(express.static(__dirname + (process.env.STATIC_DIR || '/build')));
 
 
+app.set('jwtTokenSecret', process.env.JWT_SECRET || 'developmentsecret')
+app.set('secret', process.env.SECRET || 'developmentsecret')
 
+app.use(passport.initialize());
+
+require('./lib/passport')(passport);
+var jwtauth = require('./lib/jwtauth')(app);
 
 app.use(bodyparser.json());
-require('./routes/workout-routes')(app);
+require('./routes/workout-routes')(app, jwtauth.auth);
+require('./routes/user-routes')(app, passport);
 
 var server = http.createServer(app);
 

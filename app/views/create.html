@@ -1,30 +1,38 @@
 <div ng-controller="CreateCtrl">
-	<form id="workoutBuild" novalidate>
-		<h1>Workout Builder</h1>
-		<h2>Add New Exercise</h2>
-		<input type="text" ng-model="workout.name" placeholder="Exercise Name" class="exercise-name" required/>
-		<div class="exercise-type_container">
-			<label class="exercise-type_label">Type</label>
-			<select ng-model="workout.type" class="exercise-type_select"  required>
-				<option value="">Choose...</option>
-				<option value="warmup">Warm Up</option>
-				<option value="core">Core</option>
-				<option value="cooldown">Cool Down</option>
-			</select>
+	<section class="container">
+		<form id="workoutBuild" novalidate>
+			<h1>Workout Builder</h1>
+			<h2>Add New Exercise</h2>
+			<input type="text" ng-model="workout.name" placeholder="Exercise Name *" class="exercise-name" required/>
+			<div class="exercise-type_container">
+				<label class="exercise-type_label">Type *</label>
+				<select ng-model="workout.type" class="exercise-type_select"  required>
+					<option value="">Choose...</option>
+					<option value="warmup">Warm Up</option>
+					<option value="core">Core</option>
+					<option value="cooldown">Cool Down</option>
+				</select>
+			</div>
+			<div class="exercise-duration_container"
+				<label class="exercise-duration_label">Duration *</label>
+				<input type="number" ng-model="workout.duration" placeholder="Duration"/ class="exercise-duration"required>
+			</div>
+			<textarea name="info" ng-model="workout.description" class="exercise-info" placeholder="Additional Information"></textarea>
+			<button ng-click="saveWorkout()" type="submit" class="btn-submit">Add to Workout</button>
+		</form>
+		<h2>Movement Set</h2>
+		<div ng-repeat="workout in workouts" class="movement {{workout.type}}">
+			<span>{{workout.name}}</span>
+			<!--	{{workout.duration}} min |
+			{{workout.description}} -->
+			<span href="" ng-click="deleteWorkout(workout)" class="icon-cancel-circle"></span>
 		</div>
-		<div class="exercise-duration_container"
-			<label class="exercise-duration_label">Duration</label>
-			<input type="number" ng-model="workout.duration" placeholder="Duration"/ class="exercise-duration"required>
-		</div>
-		<textarea name="info" ng-model="workout.description" class="exercise-info" placeholder="Additional Information"></textarea>
-		<button ng-click="saveWorkout()" type="submit" class="btn-submit">Add to Workout</button>
-	</form>
-	<h2>Movement Set</h2>
-
-	<div ng-repeat="workout in workouts">
-		{{workout.name}}
-		{{workout.type}}
-		{{workout.duration}}
-		{{workout.description}}<span href="" ng-click="deleteWorkout(workout)">X</span>
-	</div>
+		<form id="workoutName">
+	      <h2>Save Workout</h2>
+	      <a href="workout.html">
+	        <button type="submit" class="btn-submit">Save Your Workout</button>
+	      </a>
+	  </form>
+  </section>
 </div>
+

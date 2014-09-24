@@ -1,7 +1,9 @@
 'use strict';
 
 module.exports = function(app) {
-	app.controller('CreateCtrl', function($scope, workoutServer) {
+	app.controller('CreateCtrl', function($scope, workoutServer, $cookies, $http) {
+		console.log($cookies.jwt);
+		$http.defaults.headers.common['jwt'] = $cookies.jwt;
 		// $scope.workouts = [
 		// {name: 'test', type:'anything', duration: 5}
 		// ];

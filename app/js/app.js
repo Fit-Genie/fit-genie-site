@@ -13,11 +13,20 @@ require('./controllers/workoutController')(fitApp);
 require('./controllers/congratsController')(fitApp);
 // require('./controllers/postWorkoutController')(fitApp);
 
+require('./services/auth')(fitApp);
 require('./services/workout-server')(fitApp);
 
 fitApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/login', {
+      templateUrl: 'views/login.html',
+      controller: 'LoginController'
+    })
+    .when('/signup', {
+      templateUrl: 'views/signup.html',
+      controller: 'LoginController'
+    })
+    .when('/signout', {
       templateUrl: 'views/login.html',
       controller: 'LoginController'
     })
@@ -42,6 +51,6 @@ fitApp.config(['$routeProvider', function($routeProvider) {
       controller: 'CreateCtrl'
     })
     .otherwise({
-      redirectTo: '/create'
+      redirectTo: '/login'
     });
 }]);
