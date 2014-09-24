@@ -1,0 +1,13 @@
+.signup-link {
+  margin-top: $normal;
+  font-size: $normal;
+  text-decoration: none;
+  color: $pizazz;
+  display: block;
+  text-align: center;
+}
+
+.signup-link:hover,
+.signup-link:active {
+  color: lighten($pizazz, 20%);
+}

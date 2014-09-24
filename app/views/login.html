@@ -1,12 +1,13 @@
-<div ng-controller="LoginController">
-  <h3>Sign In</h3>
-  <form name = "userform" data-ng-hide="newuser">
-  <label>Username</label>
-  <input type="text"  required ng-model="user.username">
-  <label>Password</label>
-  <input type="password" required ng-model="user.password">
-  <button data-ng-disabled="userform.$invalid" ng-click="login()">Login</button>
-</form>
+<div ng-controller="LoginController" class="container">
+  <h1 class="centered">FitGenie</h1>
+  <h2 class="centered">Sign In</h2>
+  <form name="userform" data-ng-hide="newuser">
+    <label>Username</label>
+    <input type="text" required ng-model="user.username">
+    <label>Password</label>
+    <input type="password" required ng-model="user.password">
+    <button data-ng-disabled="userform.$invalid" ng-click="login()">Login</button>
+  </form>
 
-  <a href="/#/signup">Signup</a>
+  <a href="/#/signup" class="signup-link">Create a New Account</a>
 </div>
