@@ -1,0 +1,61 @@
+.calendar{
+  width:100%;
+  border-spacing: 0;
+  margin: $normal 0;
+}
+
+.calendar tr, th, td {
+  border-top: 1px solid $niagara;
+  width: 14%;
+  padding-top: 0;
+  text-align: center;
+  vertical-align: top;
+  font-size: $small;
+}
+
+.calendar td {
+  height: $gigantic;
+}
+
+.calendar th {
+  color: #FFF;
+  height: $normal;
+  border:0;
+  background: darken($niagara, 20%);
+  background: rgba($niagara, 0.2);
+}
+
+.calendar-today {
+  background: darken($niagara, 20%);
+  background: rgba($niagara, 0.2);
+}
+
+.data {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-size: $large;
+}
+.track-none{
+  border: 2px solid #000;
+  width: 45%;
+  height: 40%;
+  border-radius: 50%;
+}
+.track-whole {
+  color: $niagara;
+}
+
+.track-partial {
+  color: darken($scooter, 10%);
+}
+
+.track-zero {
+  color: $pizazz;
+}
+
+.track-future {
+  color: rgba($scooter, 0.5);
+}
+
+

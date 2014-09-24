@@ -1,34 +1,23 @@
 /* Workout Builder page styles */
-.workoutBuild {
-  max-width: 640px;
-  margin: 0 auto;
-  color: white;
-  line-height: 2.618rem;
-}
-
-.workoutBuild h1 {
-  font-size: 2.618rem;
-  line-height: 4.236rem;
-  color: #2fb3c6;
-}
-.workoutBuild h2 {
-  font-size: 1.618rem;
-  line-height: 2.628rem;
-}
-input.exercise-name {
+input.exercise-name, input.workout-name {
   width: 100%;
   height: 1.618rem;
 }
+
 input.exercise-name,
 .exercise-type_select,
 .exercise-duration,
-.exercise-info {
+.exercise-info,
+input.workout-name {
+  background: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0.2);
   border: 0;
   color: white;
   height: 1.618rem;
   padding: 0.382em;
+  font-size: $small;
 }
+
 
 .exercise-type_select {
   display: inline-block;
@@ -37,23 +26,24 @@ input.exercise-name,
   line-height: 1;
   border: 0;
   border-radius: 0;
-
 }
+
 .exercise-type_container,
 .exercise-duration_container {
   width: 50%;
   height: 2.618rem;
-  display: inline-block;
   float: left;
 }
+
 .exercise-duration_label {
-  display:block;
+  display: block;
   width: 100%;
   clear: both;
 }
+
 .exercise-duration {
   display: inline-block;
-  width: 16.18%;
+  width: 23%;
   margin: 0 0.382rem ;
 }
 
@@ -62,16 +52,31 @@ input.exercise-name,
   height: 4.236rem;
   margin-top: 0.382rem;
 }
-.btn-submit {
+
+.btn-submit ,
+.btn-submit-inactive {
   width: 100%;
   height: 2.618rem;
   background-color: #f4f3f3;
   color: darken($scooter, 20%);
   border: 1px solid #2fb3c6;
-  margin-bottom: 1.618rem;
-  font-size: 1rem;
+  margin: $small 0;
+  font-size: $small;
 }
+
+.btn-submit-inactive {
+  background-color: darken(#f4f3f3, 30%);
+}
+
 .btn-submit:hover,
 .btn-submit:active {
   cursor: pointer;
 }
+.profile {
+  width: $gigantic;
+}
+
+.incomplete-form {
+  border: 1px solid $pizazz;
+}
+

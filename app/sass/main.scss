@@ -1,8 +1,12 @@
 @import "icon-fonts";
+@import "theme";
 @import "reset";
-@import "colors";
+@import "login";
+@import "signup";
 @import "workout";
 @import "create";
+@import "congratulations";
+@import "track";
 
 /*******************************
 Module
@@ -15,9 +19,9 @@ nav {
 .user-login {
   display: none;
   width: 12rem;
-  font-size: 1.2rem;
+  font-size: $small;
   padding: 0.2rem;
-  margin: 0.6rem 1rem 0 0;
+  margin: 1rem 1rem 0 0;
 }
 
 .login {
@@ -27,17 +31,78 @@ nav {
 .logo {
   color: darken($scooter, 20%);
   font-family: 'Arvo', serif;
-  padding: 0.6rem;
-  font-size: 2rem;
+  padding: 0 0.8rem;
+  font-size: $normal;
   display: inline-block;
 }
 
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  color: white;
+  line-height: 2.618rem;
+}
+
+.centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-submit {
+  width: 100%;
+  height: 2.618rem;
+  background-color: #f4f3f3;
+  color: darken($scooter, 20%);
+  border: 1px solid #2fb3c6;
+  margin: $small 0;
+  font-size: $small;
+}
+
+.btn-submit-inactive {
+  background-color: darken(#f4f3f3, 30%);
+}
+
+.btn-submit:hover,
+.btn-submit:active {
+  background: darken($wild-sand, 50%);
+  background: rgba(244, 243, 243, 0.5);
+  color: white;
+  cursor: pointer;
+}
+
+input {
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+  color: white;
+  height: $normal;
+  padding: $tiny;
+  font-size: $small;
+}
+
+/* Heading & Text Style
+****************************/
+
+h1 {
+  font-size: $large;
+  line-height: $huge;
+  color: $scooter;
+}
+
+h2 {
+  font-size: $normal;
+  line-height: $large;
+}
 
 /*******************************
 State
 ********************************/
 
 @media (min-width: 641px) {
+  .signup form {
+    margin-left: 6rem;
+  }
+
   .user-login {
     display: inline;
   }
@@ -53,7 +118,12 @@ State
     margin: 0;
     bottom: 0;
     width: 100%;
+    background: darken($niagara, 80%);
     background: rgba(70, 101, 106, 0.9);
+  }
+
+  .controls-button {
+    border-radius: 0;
   }
 
   .timer {
