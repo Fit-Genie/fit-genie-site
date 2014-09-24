@@ -39,6 +39,13 @@
 .icon-angry:before {
   content: "\e604";
 }
+
+.icon-info span {
+  display: none;
+}
+.icon-info:hover span {
+  display: block;
+}
 .icon-info:before {
   content: "\e605";
 }
