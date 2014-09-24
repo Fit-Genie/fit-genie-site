@@ -21,11 +21,11 @@
 			<button ng-click="saveWorkout()" type="submit" class="btn-submit">Add to Workout</button>
 		</form>
 		<h2>Movement Set</h2>
-		<div ng-repeat="workout in workouts">
-			{{workout.name}}
-			{{workout.type}}
-			{{workout.duration}}
-			{{workout.description}}<span href="" ng-click="deleteWorkout(workout)">X</span>
+		<div ng-repeat="workout in workouts" class="movement {{workout.type}}">
+			<span>{{workout.name}}</span>
+			<!--	{{workout.duration}} min |
+			{{workout.description}} -->
+			<span href="" ng-click="deleteWorkout(workout)" class="icon-cancel-circle"></span>
 		</div>
 		<form id="workoutName">
 	      <h2>Save Workout</h2>
