@@ -28,10 +28,6 @@ module.exports = function(app) {
         return $scope.user.password === $scope.user.passwordConfirmation;
     };
 
-    // $scope.message  = function() {
-    //     return "Passwords do not match";
-    // };
-
     $scope.createNewUser = function() {
       if($scope.validatePassword() === true) {
       console.log('clicked');
