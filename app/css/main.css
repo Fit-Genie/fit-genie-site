@@ -122,6 +122,10 @@ html {
   width: 12rem;
   display: inline-block; }
 
+.required-info {
+  color: #cdcdcd;
+  text-align: center; }
+
 .congrats p {
   text-align: center;
   font-size: 1.618rem;
