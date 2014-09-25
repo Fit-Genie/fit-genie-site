@@ -13,9 +13,6 @@ module.exports = function(app) {
        // while(i>0) {
         console.log($scope.workouts);
         var min = $scope.workouts[0].minutes;
-        if (Number.isInteger(min) === false) {
-          min = 0;
-        }
         var sec = $scope.workouts[0].seconds;
         var total = sec + min*60;
         console.log(total);

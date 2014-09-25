@@ -134,7 +134,7 @@ html {
 
 .congrats input {
   margin: 0 auto 1.618rem;
-  width: 300px;
+  width: 310px;
   display: block; }
 
 .congrats button {
@@ -143,6 +143,7 @@ html {
 .congrats textarea {
   margin: 0 auto;
   width: 320px;
+  font-size: 1rem;
   text-align: left;
   padding: 1rem; }
 
@@ -196,7 +197,7 @@ html {
 
 /* General timer style, and color changes for current movement */
 .timer {
-  color: #ff8a00;
+  color: #fff;
   max-width: 500px;
   margin: 0 auto;
   font-family: 'Droid Sans Mono', Monaco, monospace;
@@ -204,15 +205,18 @@ html {
   text-align: center;
   padding: 3rem 0 1rem 0; }
 
-.timer.warmup {
-  color: #ff8a00; }
+/* .timer.warmup {
+  color: \$pizazz;
+}
 
 .timer.core {
-  color: #0ea692; }
+  color: \$niagara;
+}
 
 .timer.cooldown {
-  color: #2fb3c6; }
-
+  color: \$scooter;
+}
+ */
 /* General movement styles */
 .movement {
   max-width: 640px;
@@ -342,7 +346,7 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 
 .congrats input {
   margin: 0 auto 1.618rem;
-  width: 300px;
+  width: 310px;
   display: block; }
 
 .congrats button {
@@ -351,6 +355,7 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 .congrats textarea {
   margin: 0 auto;
   width: 320px;
+  font-size: 1rem;
   text-align: left;
   padding: 1rem; }
 
@@ -378,6 +383,7 @@ nav {
   width: 1.618rem; }
 
 .dropdown {
+  display: none;
   position: relative;
   width: 100%;
   top: 0.381rem;
@@ -503,6 +509,7 @@ State
   .dropdown-icon, .dropdown-icon img {
     display: none; }
   .dropdown {
+    display: block;
     position: relative;
     top: 0;
     right: 0;
