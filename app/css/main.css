@@ -100,6 +100,10 @@ html {
 .signup-link:hover, .signup-link:active {
   color: #ffb866; }
 
+
+.btn-signup {
+  width: 10rem !important; }
+
 .signup fieldset {
   margin: 1.618rem 0; }
 
@@ -283,44 +287,47 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
   font-size: 1rem; }
 
 .exercise-type_select {
-  float: right;
+  display: inline-block;
   width: 50%;
-  margin-top: 4px;
   padding: 5px;
   line-height: 1;
-  border: 0; }
+  border: 0;
+  border-radius: 0; }
 
 .exercise-type_container, .exercise-duration_container {
+  width: 50%;
   height: 2.618rem;
-  float: left;
-  clear: both; }
-
-.exercise-type_container, .exercise-duration_container {
-  width: 100%;
-  display: block; }
-
-.exercise-duration_label, .exercise-type_label {
-  width: 49%;
   float: left; }
 
-.exercise-duration_label, .exercise-duration, .exercise-type_label {
-  display: inline-block; }
-
-.exercise-durations {
-  float: right;
-  width: 50%;
+.exercise-duration_label {
+  display: block;
+  width: 100%;
   clear: both; }
 
 .exercise-duration {
-  width: 24%;
-  padding: 0 0 0 0.382em;
-  margin: 2px 2px 0 2px;
-  float: right; }
+  display: inline-block;
+  width: 23%;
+  margin: 0 0.382rem; }
 
 .exercise-info {
   width: 100%;
   height: 4.236rem;
   margin-top: 0.382rem; }
+
+.btn-submit, .btn-submit-inactive {
+  width: 100%;
+  height: 2.618rem;
+  background-color: #f4f3f3;
+  color: #1b6974;
+  border: 1px solid #2fb3c6;
+  margin: 1rem 0;
+  font-size: 1rem; }
+
+.btn-submit-inactive {
+  background-color: #aba3a3; }
+
+.btn-submit:hover, .btn-submit:active {
+  cursor: pointer; }
 
 .profile {
   width: 6.854rem; }
@@ -400,18 +407,18 @@ Module
 .btn-submit {
   width: 100%;
   height: 2.618rem;
-  background-color: #0a7768;
-  color: #FFF;
+  background-color: #f4f3f3;
+  color: #1b6974;
   border: 1px solid #2fb3c6;
   margin: 1rem 0;
   font-size: 1rem; }
 
 .btn-submit-inactive {
-  background-color: #04302b; }
+  background-color: #aba3a3; }
 
 .btn-submit:hover, .btn-submit:active {
-  background: #06483f;
-  background: rgba(10, 118, 104, 0.5);
+  background: #796f6f;
+  background: rgba(244, 243, 243, 0.5);
   color: white;
   cursor: pointer; }
 
@@ -444,13 +451,7 @@ State
   .user-login {
     display: inline; }
   .movement {
-    border-radius: 6px; }
-  .exercise-type_container, .exercise-duration_container {
-    width: 47%;
-    margin: 0 4px;
-    float: left;
-    display: inline-block;
-    clear: none; } }
+    border-radius: 6px; } }
 
 @media (max-width: 640px) {
   .controls {
