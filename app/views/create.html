@@ -32,7 +32,7 @@
 					Duration (min:sec) *
 				</label>
 				<div class="exercise_durations">
-					<input ng-model="workout.duration" id="exercise-duration_min" name="exercise-duration_min" type="number" placeholder="min" class="exercise-duration" required maxlength="2"><input ng-model="workout.duration" id="exercise-duration_sec" name="exercise-duration_sec" type="number" placeholder="sec" class="exercise-duration" required maxlength="2">
+					<input ng-model="workout.minutes" id="exercise-duration_min" name="exercise-duration_min" type="number" placeholder="min" class="exercise-duration" required maxlength="2"><input ng-model="workout.seconds" id="exercise-duration_sec" name="exercise-duration_sec" type="number" placeholder="sec" class="exercise-duration" required maxlength="2">
 				</div>
 			</div>
 			<textarea name="info" ng-model="workout.description" class="exercise-info" placeholder="Additional Information">
@@ -56,30 +56,6 @@
 			<span href="" ng-click="deleteWorkout(workout)" class="icon-cancel-circle">
 			</span>
 		</div>
-<<<<<<< HEAD
-		<div class="exercise-duration_container"
-			<label class="exercise-duration_label">Duration</label>
-			<input type="number" ng-model="workout.minutes" placeholder="minutes"/ class="exercise-duration"required>
-			<input type="number" ng-model="workout.seconds" placeholder="seconds"/ class="exercise-duration"required>
-		</div>
-		<textarea name="info" ng-model="workout.description" class="exercise-info" placeholder="Additional Information"></textarea>
-		<button ng-click="saveWorkout()" type="submit" class="btn-submit">Add to Workout</button>
-	</form>
-	<h2>Movement Set</h2>
-	<div ng-repeat="workout in workouts">
-		{{workout.name}}
-		{{workout.type}}
-		{{workout.minutes}}
-		{{workout.seconds}}
-		{{workout.description}}<span href="" ng-click="deleteWorkout(workout)">X</span>
-	</div>
-	<form id="workoutName">
-      <h2>Save Workout</h2>
-      <a href="workout.html">
-        <button type="submit" class="btn-submit">Save Your Workout</button>
-      </a>
-    </form>
-=======
 		<form id="workoutName">
 	      <h2>
 	      	Save Workout
@@ -91,6 +67,5 @@
 	      </a>
 	  </form>
   </section>
->>>>>>> a97873c2f1344c8c0e7855ceb6be0536fff33add
 </div>
 

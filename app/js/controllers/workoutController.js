@@ -41,7 +41,7 @@ module.exports = function(app) {
       }
       if(total === -2) {
         $scope.workouts.shift();
-        if($scope.workouts.length !== 0) {
+        if($scope.workouts.length > 0) {
          var min = $scope.workouts[0].minutes;
          var sec = $scope.workouts[0].seconds;
          var total = sec + min*60;
@@ -49,6 +49,8 @@ module.exports = function(app) {
        }
        $scope.countdown(total);
      }
+     if($scope.workouts.length === 0)
+      window.location.replace("/#/congrats");
    }
 
 
