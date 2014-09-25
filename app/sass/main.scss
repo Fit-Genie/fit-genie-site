@@ -37,6 +37,7 @@ nav {
 }
 
 .dropdown {
+  display: none;
   position: relative;
   width: 100%;
   top: $tiny;
@@ -96,6 +97,11 @@ nav {
   text-align: center;
 }
 
+// Adjusts Container in preworkout.html
+.preworkout{
+  margin-top: $gigantic;
+}
+
 .btn-submit {
   width: 100%;
   height: 2.618rem;
@@ -120,6 +126,9 @@ nav {
   border: 1px solid darken(#2fb3c6, 25%);
   background-color: darken($dark-niagara, 15%);
   background-color: rgba($dark-niagara, 0.3);
+}
+.btn-small {
+  width: 50%;
 }
 
 .go-workout {
@@ -191,6 +200,7 @@ State
   }
 
   .dropdown {
+    display: block;
     position: relative;
     top: 0;
     right: 0;
