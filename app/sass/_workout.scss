@@ -1,6 +1,6 @@
 /* General timer style, and color changes for current movement */
 .timer {
-  color: $pizazz;
+  color: #fff;
   max-width: 500px;
   margin: 0 auto;
   font-family: 'Droid Sans Mono', Monaco, monospace;
@@ -9,18 +9,18 @@
   padding: 3rem 0 1rem 0;
 }
 
-.timer.warmup {
-  color: $pizazz;
+/* .timer.warmup {
+  color: \$pizazz;
 }
 
 .timer.core {
-  color: $niagara;
+  color: \$niagara;
 }
 
 .timer.cooldown {
-  color: $scooter;
+  color: \$scooter;
 }
-
+ */
 /* General movement styles */
 .movement {
   max-width: 640px;
