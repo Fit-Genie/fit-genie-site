@@ -9,14 +9,16 @@
   <body>
     <!-- JS CONTROLLERS -->
     <div ng-app="fitApp">
-      <div ng-view>
-        <!-- STRUCTURE STARTS HERE -->
+      <!-- Nav Structure Starts Here -->
         <nav>
           <h1 class="logo">
             FitGenie
           </h1>
+          <div class="dropdown-icon" >
+            <img src="img/dropdown-img.svg"/>
+          </div>
           <div class="dropdown">
-            <ul>
+            <ul class="dropdown-list">
               <li class="dropdown-items">
                 <a href="#profile" class="dropdown-items_link">
                   View Profile
@@ -45,7 +47,8 @@
             </ul>
           </div>
         </nav>
-        <!-- / STRUCTURE -->
+        <!-- Nav Structure Ends -->
+      <div ng-view>
       </div>
     </div>
     <script src="bundle.js"></script>

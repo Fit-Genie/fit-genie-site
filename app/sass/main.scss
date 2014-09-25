@@ -8,12 +8,61 @@
 @import "workout";
 @import "create";
 @import "congratulations";
-@import "nav";
+
 
 
 /*******************************
 Module
 ********************************/
+// Nav & Dropdown Styles
+nav {
+  background: $niagara;
+  margin-bottom: $small;
+}
+
+//Mobile Styling
+.dropdown-icon {
+  position: absolute;
+  top: 0;
+  right: -$normal;
+  height: $gigantic;
+  width: $gigantic;
+}
+
+.dropdown-icon img {
+  margin: $normal;
+  height: $normal;
+  width: $normal;
+}
+
+.dropdown {
+  display: none;
+  position: relative;
+  width: 100%;
+  top: $tiny;
+  right: 0;
+}
+
+.dropdown-items {
+  list-style-type: none;
+  width: 100%;
+  background: $scooter;
+  font-size: $small;
+  border-bottom: 1px solid darken($scooter, 10%);
+  padding: $smaller;
+
+}
+
+.dropdown-items:hover{
+  background: darken($scooter, 10%);
+}
+
+.dropdown-items_link {
+  text-decoration: none;
+  color: white;
+}
+
+// LOGIN INFO
 .user-login {
   display: none;
   width: 12rem;
