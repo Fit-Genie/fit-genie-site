@@ -1,22 +1,17 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Fit Genie</title>
-  <link href='http://fonts.googleapis.com/css?family=Arvo|Ubuntu|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  <div ng-app="fitApp">
-    <nav>
-      <h1 class="logo">FitGenie</h1>
-      <!--  <div class="login">
-      <input class="user-login" type="text" placeholder="username">
-      <input class="user-login" type="text" placeholder="password">
-    </div> -->
-  </nav>
-  <div ng-view></div>
-</div>
-<script src="bundle.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Fit Genie</title>
+    <link href='http://fonts.googleapis.com/css?family=Arvo|Ubuntu|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!-- JS CONTROLLERS -->
+    <div ng-app="fitApp">
+      <div ng-view>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
 </html>

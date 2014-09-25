@@ -7,7 +7,7 @@
 
 .congrats input {
   margin: 0 auto $normal;
-  width: 300px;
+  width: 310px;
   display: block;
 }
 
@@ -18,6 +18,7 @@
 .congrats textarea {
   margin: 0 auto;
   width: 320px;
+  font-size: $small;
   text-align: left;
   padding: $small;
 }

@@ -14,7 +14,7 @@ module.exports = function(app) {
         console.log($scope.workouts);
         var min = $scope.workouts[0].minutes;
         var sec = $scope.workouts[0].seconds;
-        var total = sec + min*60
+        var total = sec + min*60;
         console.log(total);
         $scope.countdown(total);
           //i--;
@@ -56,10 +56,14 @@ module.exports = function(app) {
 
    $scope.pause = function() {
     $timeout.cancel($scope.timeout);
+
+    $scope.isPaused = true;
   };
 
   $scope.resume = function() {
     $scope.countdown($scope.total);
+
+    $scope.isPaused = false;
   }
 
 });

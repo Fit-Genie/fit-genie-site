@@ -122,6 +122,10 @@ html {
   width: 12rem;
   display: inline-block; }
 
+.required-info {
+  color: #cdcdcd;
+  text-align: center; }
+
 .congrats p {
   text-align: center;
   font-size: 1.618rem;
@@ -130,7 +134,7 @@ html {
 
 .congrats input {
   margin: 0 auto 1.618rem;
-  width: 300px;
+  width: 310px;
   display: block; }
 
 .congrats button {
@@ -139,6 +143,7 @@ html {
 .congrats textarea {
   margin: 0 auto;
   width: 320px;
+  font-size: 1rem;
   text-align: left;
   padding: 1rem; }
 
@@ -178,12 +183,6 @@ html {
   padding: 0;
   font-size: 2.618rem; }
 
-.track-none {
-  border: 2px solid #000;
-  width: 45%;
-  height: 40%;
-  border-radius: 50%; }
-
 .track-whole {
   color: #0ea692; }
 
@@ -194,11 +193,11 @@ html {
   color: #ff8a00; }
 
 .track-future {
-  color: rgba(47, 179, 198, 0.5); }
+  color: rgba(47, 179, 198, 0.2); }
 
 /* General timer style, and color changes for current movement */
 .timer {
-  color: #ff8a00;
+  color: #fff;
   max-width: 500px;
   margin: 0 auto;
   font-family: 'Droid Sans Mono', Monaco, monospace;
@@ -206,15 +205,18 @@ html {
   text-align: center;
   padding: 3rem 0 1rem 0; }
 
-.timer.warmup {
-  color: #ff8a00; }
+/* .timer.warmup {
+  color: \$pizazz;
+}
 
 .timer.core {
-  color: #0ea692; }
+  color: \$niagara;
+}
 
 .timer.cooldown {
-  color: #2fb3c6; }
-
+  color: \$scooter;
+}
+ */
 /* General movement styles */
 .movement {
   max-width: 640px;
@@ -294,7 +296,7 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 
 .exercise-type_select {
   float: right;
-  width: 50%;
+  width: 70%;
   margin-top: 4px;
   padding: 5px;
   line-height: 1;
@@ -310,18 +312,18 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
   display: block; }
 
 .exercise-duration_label, .exercise-type_label {
-  width: 49%;
+  width: 29%;
   float: left; }
 
 .exercise-duration_label, .exercise-duration, .exercise-type_label {
   display: inline-block; }
 
 .exercise-durations {
-  width: 50%;
+  width: 70%;
   clear: both; }
 
 .exercise-duration {
-  width: 24%;
+  width: 34%;
   padding: 0 0 0 0.382em;
   margin: 2px 2px 0 2px; }
 
@@ -344,7 +346,7 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 
 .congrats input {
   margin: 0 auto 1.618rem;
-  width: 300px;
+  width: 310px;
   display: block; }
 
 .congrats button {
@@ -353,6 +355,7 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 .congrats textarea {
   margin: 0 auto;
   width: 320px;
+  font-size: 1rem;
   text-align: left;
   padding: 1rem; }
 
@@ -363,8 +366,43 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 Module
 ********************************/
 nav {
-  background: #7bd4e0;
-  margin-bottom: 2rem; }
+  background: #0ea692;
+  margin-bottom: 1rem; }
+
+.dropdown-icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -1.618rem;
+  height: 6.854rem;
+  width: 6.854rem; }
+
+.dropdown-icon img {
+  margin: 1.618rem;
+  height: 1.618rem;
+  width: 1.618rem; }
+
+.dropdown {
+  position: relative;
+  width: 100%;
+  top: 0.381rem;
+  right: 0; }
+
+.dropdown-items {
+  list-style-type: none;
+  display: block;
+  width: 100%;
+  background: #2fb3c6;
+  font-size: 1rem;
+  border-bottom: 1px solid #258f9d;
+  padding: 0.618rem; }
+
+.dropdown-items:hover {
+  background: #258f9d; }
+
+.dropdown-items_link {
+  text-decoration: none;
+  color: white; }
 
 .user-login {
   display: none;
@@ -377,7 +415,7 @@ nav {
   float: right; }
 
 .logo {
-  color: #1b6974;
+  color: #b9e8ee;
   font-family: 'Arvo', serif;
   padding: 0 0.8rem;
   font-size: 1.618rem;
@@ -392,6 +430,9 @@ nav {
 .centered {
   margin: 0 auto;
   text-align: center; }
+
+.big-top-margin {
+  margin-top: 6.854rem; }
 
 .btn-submit {
   width: 100%;
@@ -414,6 +455,17 @@ nav {
   border: 1px solid #17575f;
   background-color: #04302b;
   background-color: rgba(10, 118, 104, 0.3); }
+
+.btn-small {
+  width: 50%; }
+
+.go-workout {
+  background-color: #06483f;
+  border: 1px solid #17575f;
+  margin-top: 0; }
+
+.go-workout:hover {
+  background-color: rgba(6, 71, 63, 0.3); }
 
 input {
   background: white;
@@ -451,6 +503,25 @@ State
     float: left;
     display: inline-block;
     clear: none; } }
+
+@media (min-width: 710px) {
+  .dropdown-icon, .dropdown-icon img {
+    display: none; }
+  .dropdown {
+    display: block !important;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%; }
+  .dropdown-list {
+    margin: 0 auto;
+    width: 100%; }
+  .dropdown-items {
+    border-bottom: none;
+    width: 20%;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center; } }
 
 @media (max-width: 640px) {
   .controls {

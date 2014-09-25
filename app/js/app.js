@@ -50,6 +50,14 @@ fitApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'views/create.html',
       controller: 'CreateCtrl'
     })
+    .when('/track', {
+      templateUrl: 'views/track.html',
+      controller: 'TrackController'
+    })
+    .when('/profile', {
+      templateUrl: 'views/profile.html',
+      controller: 'ProfileController'
+    })
     .otherwise({
       redirectTo: '/login'
     });
