@@ -168,6 +168,7 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['style','angulartestwatch', 'simplemocha']);
   grunt.registerTask('buildtest', ['test', 'build']);
   grunt.registerTask('default', ['build','concurrent:watching']);
+  grunt.registerTask('watch', ['build','watch:css']);
 
 
   // get ready for deploy
