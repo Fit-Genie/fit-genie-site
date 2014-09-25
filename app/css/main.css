@@ -182,12 +182,6 @@ html {
   padding: 0;
   font-size: 2.618rem; }
 
-.track-none {
-  border: 2px solid #000;
-  width: 45%;
-  height: 40%;
-  border-radius: 50%; }
-
 .track-whole {
   color: #0ea692; }
 
@@ -198,7 +192,7 @@ html {
   color: #ff8a00; }
 
 .track-future {
-  color: rgba(47, 179, 198, 0.5); }
+  color: rgba(47, 179, 198, 0.2); }
 
 /* General timer style, and color changes for current movement */
 .timer {

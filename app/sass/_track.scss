@@ -36,12 +36,7 @@
   padding: 0;
   font-size: $large;
 }
-.track-none{
-  border: 2px solid #000;
-  width: 45%;
-  height: 40%;
-  border-radius: 50%;
-}
+
 .track-whole {
   color: $niagara;
 }
@@ -55,7 +50,7 @@
 }
 
 .track-future {
-  color: rgba($scooter, 0.5);
+  color: rgba($scooter, 0.2);
 }
 
 
