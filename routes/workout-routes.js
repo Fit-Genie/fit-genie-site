@@ -7,7 +7,6 @@ module.exports = function(app, jwtauth) {
 	app.get(baseUrl, jwtauth, function(req, res) {
 		Workout.find({'user_id': req.user._id}, function(err, workouts) {
 			if(err) return res.status(500).json(err);
-			console.log('in routes ' + req.user.basic.username);
 			return res.json(workouts);
 		});
 	});
