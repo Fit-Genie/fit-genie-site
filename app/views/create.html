@@ -79,17 +79,18 @@
 			<button ng-click="saveWorkout()" type="submit" class="btn-submit">
 				Add to Workout
 			</button>
-			<a href="#/workout">
-	      <button type="submit" class="btn-submit go-workout">
-	      	Begin Workout
-	      </button>
-			</a>
+
 			<p>
-				* - Denotes Required Field
+				* Denotes Required Field
 			</p>
 		</form>
 
 		<div ng-if="workouts.length !== 0">
+      <a href="#/workout">
+        <button type="submit" class="btn-submit go-workout">
+          Begin Workout
+        </button>
+      </a>
 			<h2>
 				Movement Set
 			</h2>
@@ -102,16 +103,6 @@
 				<span href="" ng-click="deleteWorkout(workout)" class="icon-cancel-circle">
 				</span>
 			</div>
-			<form id="workoutName">
-		      <h2>
-		      	Save Workout
-		      </h2>
-		      <a href="#">
-		        <button type="submit" class="btn-submit">
-		        	Save Your Workout
-		        </button>
-		      </a>
-		  </form>
 		</div>
 
   </section>
