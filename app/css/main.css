@@ -41,6 +41,8 @@
 
 .icon-info:hover span, .icon-info:active span {
   display: block;
+  width: 18rem;
+  font-family: 'Ubuntu', sans-serif;
   position: absolute;
   top: -1rem;
   right: 24px;
@@ -86,6 +88,17 @@ html {
   font-family: 'Ubuntu', sans-serif;
   color: white;
   height: 100%; }
+
+.signup-link {
+  margin-top: 1.618rem;
+  font-size: 1.618rem;
+  text-decoration: none;
+  color: #ff8a00;
+  display: block;
+  text-align: center; }
+
+.signup-link:hover, .signup-link:active {
+  color: #ffb866; }
 
 .signup fieldset {
   margin: 1.618rem 0; }
@@ -338,19 +351,30 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 .happy-meter {
   width: 320px; }
 
+nav {
+  background: #2fb3c6;
+  margin-bottom: 2rem; }
+
+.dropdown {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.dropdown-items {
+  list-style-type: none;
+  width: 100px;
+  background: #2fb3c6;
+  border-bottom: #258f9d;
+  padding: 0.381rem; }
+
 /*******************************
 Module
 ********************************/
-nav {
-  background: #7bd4e0;
-  margin-bottom: 2rem; }
-
 .user-login {
   display: none;
   width: 12rem;
   font-size: 1rem;
   padding: 0.2rem;
-  color: red;
   margin: 1rem 1rem 0 0; }
 
 .login {

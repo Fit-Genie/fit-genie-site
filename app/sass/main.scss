@@ -8,16 +8,12 @@
 @import "workout";
 @import "create";
 @import "congratulations";
+@import "nav";
 
 
 /*******************************
 Module
 ********************************/
-nav {
-  background: lighten($scooter, 20%);
-  margin-bottom: 2rem;
-}
-
 .user-login {
   display: none;
   width: 12rem;

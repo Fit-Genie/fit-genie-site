@@ -1,0 +1,26 @@
+// Nav & Dropdown Styles
+nav {
+  background: $scooter;
+  margin-bottom: 2rem;
+}
+
+//Mobile Styling
+.dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+
+.dropdown-items {
+  list-style-type: none;
+  width: 100px;
+  background: $scooter;
+  border-bottom: darken($scooter, 10%);
+  padding: $tiny;
+
+}
+
+.dropdown-items_link {
+
+}
