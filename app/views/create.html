@@ -88,18 +88,32 @@
 				* - Denotes Required Field
 			</p>
 		</form>
-		<h2>
-			Movement Set
-		</h2>
-		<div ng-repeat="workout in workouts" class="movement {{workout.type}}">
-			<span>
-				{{workout.name}}
-			</span>
-			<!--	{{workout.duration}} min |
-			{{workout.description}} -->
-			<span href="" ng-click="deleteWorkout(workout)" class="icon-cancel-circle">
-			</span>
+
+		<div ng-if="workouts.length !== 0">
+			<h2>
+				Movement Set
+			</h2>
+			<div ng-repeat="workout in workouts" class="movement {{workout.type}}">
+				<span>
+					{{workout.name}}
+				</span>
+				<!--	{{workout.duration}} min |
+				{{workout.description}} -->
+				<span href="" ng-click="deleteWorkout(workout)" class="icon-cancel-circle">
+				</span>
+			</div>
+			<form id="workoutName">
+		      <h2>
+		      	Save Workout
+		      </h2>
+		      <a href="#">
+		        <button type="submit" class="btn-submit">
+		        	Save Your Workout
+		        </button>
+		      </a>
+		  </form>
 		</div>
+
   </section>
 </div>
 
