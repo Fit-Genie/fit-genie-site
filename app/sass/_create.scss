@@ -21,7 +21,7 @@ input.workout-name {
 
 .exercise-type_select {
   float: right;
-  width: 50%;
+  width: 70%;
   margin-top: 4px;
   padding: 5px;
   line-height: 1;
@@ -43,7 +43,7 @@ input.workout-name {
 
 .exercise-duration_label,
 .exercise-type_label {
-  width: 49%;
+  width: 29%;
   float: left;
 }
 
@@ -54,12 +54,12 @@ input.workout-name {
 }
 
 .exercise-durations{
-  width: 50%;
+  width: 70%;
   clear: both;
 }
 
 .exercise-duration {
-  width: 24%;
+  width: 34%;
   padding: 0 0 0 0.382em;
   margin: 2px 2px 0 2px;
 }
@@ -77,3 +77,4 @@ input.workout-name {
 .incomplete-form {
   border: 1px solid $pizazz;
 }
+

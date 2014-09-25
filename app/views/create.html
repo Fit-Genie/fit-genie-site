@@ -1,4 +1,43 @@
 <div ng-controller="CreateCtrl">
+	<!-- Nav Structure Starts Here -->
+  <nav>
+    <h1 class="logo">
+      FitGenie
+    </h1>
+    <div class="dropdown-icon" >
+      <img src="img/dropdown-img.svg"/>
+    </div>
+    <div class="dropdown">
+      <ul class="dropdown-list">
+        <li class="dropdown-items">
+          <a href="#profile" class="dropdown-items_link">
+            View Profile
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#workout" class="dropdown-items_link">
+            My Workout
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#create" class="dropdown-items_link">
+            Edit Workout
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#tracking" class="dropdown-items_link">
+            Progress Tracker
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#login" class="dropdown-items_link">
+            Sign Out
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+	<!-- Nav Structure Ends -->
 	<section class="container">
 		<form id="workoutBuild" novalidate>
 			<h1>
@@ -29,10 +68,10 @@
 			</div>
 			<div class="exercise-duration_container">
 				<label class="exercise-duration_label">
-					Duration (min:sec) *
+					Duration *
 				</label>
 				<div class="exercise_durations">
-					<input ng-model="workout.duration" id="exercise-duration_min" name="exercise-duration_min" type="number" placeholder="min" class="exercise-duration" required maxlength="2"><input ng-model="workout.duration" id="exercise-duration_sec" name="exercise-duration_sec" type="number" placeholder="sec" class="exercise-duration" required maxlength="2">
+					<input ng-model="workout.minutes" id="exercise-duration_min" name="exercise-duration_min" type="number" placeholder="min" class="exercise-duration" required maxlength="2"><input ng-model="workout.seconds" id="exercise-duration_sec" name="exercise-duration_sec" type="number" placeholder="sec" class="exercise-duration" required maxlength="2">
 				</div>
 			</div>
 			<textarea name="info" ng-model="workout.description" class="exercise-info" placeholder="Additional Information">
@@ -40,6 +79,11 @@
 			<button ng-click="saveWorkout()" type="submit" class="btn-submit">
 				Add to Workout
 			</button>
+			<a href="#/workout">
+	      <button type="submit" class="btn-submit go-workout">
+	      	Begin Workout
+	      </button>
+			</a>
 			<p>
 				* - Denotes Required Field
 			</p>
@@ -69,9 +113,6 @@
 		      </a>
 		  </form>
 		</div>
-
-
-
 
   </section>
 </div>

@@ -3,25 +3,22 @@
     <form name="newuserform">
       <fieldset>
         <div class="line">
-          <label>Login</label>
+          <label>Login *</label>
           <input type="text" required data-ng-model="user.username" placeholder="username"/>
         </div>
         <div class="line">
-          <label>Password</label>
+          <label>Password *</label>
           <input type="password" required data-ng-model="user.password" placeholder="password"/>
         </div>
         <div class="line">
-          <label>Confirm Password</label>
+          <label>Confirm Password *</label>
           <input type="password" required data-ng-model="user.passwordConfirmation" placeholder="password confirmation"/>
         </div>
+        <p class="required-info">* indicates required field</p>
       </fieldset>
       <fieldset>
         <div class="line">
-          <label>First Name</label>
-          <input type="text">
-        </div>
-        <div class="line">
-          <label>Last Name</label>
+          <label>Name</label>
           <input type="text">
         </div>
         <div class="line">
