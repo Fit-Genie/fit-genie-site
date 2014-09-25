@@ -122,6 +122,16 @@ nav {
   background-color: rgba($dark-niagara, 0.3);
 }
 
+.go-workout {
+  background-color: darken($dark-niagara, 10%);
+  border: 1px solid darken(#2fb3c6, 25%);
+  margin-top: 0;
+}
+
+.go-workout:hover {
+  background-color: rgba(darken($dark-niagara, 10%), 0.3);
+}
+
 input {
   background: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0.2);
