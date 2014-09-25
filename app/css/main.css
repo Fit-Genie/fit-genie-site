@@ -108,7 +108,7 @@ html {
   text-align: center; }
 
 .signup-link:hover, .signup-link:active {
-  color: #ffb866; }
+  color: #0a7768; }
 
 .signup fieldset {
   margin: 1.618rem 0; }
@@ -298,7 +298,7 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 
 .exercise-type_select {
   float: right;
-  width: 50%;
+  width: 70%;
   margin-top: 4px;
   padding: 5px;
   line-height: 1;
@@ -314,18 +314,18 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
   display: block; }
 
 .exercise-duration_label, .exercise-type_label {
-  width: 49%;
+  width: 29%;
   float: left; }
 
 .exercise-duration_label, .exercise-duration, .exercise-type_label {
   display: inline-block; }
 
 .exercise-durations {
-  width: 50%;
+  width: 70%;
   clear: both; }
 
 .exercise-duration {
-  width: 24%;
+  width: 34%;
   padding: 0 0 0 0.382em;
   margin: 2px 2px 0 2px; }
 
@@ -441,12 +441,6 @@ nav {
   margin: 1rem 0;
   font-size: 1rem; }
 
-<<<<<<< HEAD
-.btn-submit-inactive {
-  background-color: #04302b; }
-
-=======
->>>>>>> 5b0028568e5f38834cbe00ff41e45a87dd77abca
 .btn-submit:hover, .btn-submit:active {
   background: #06483f;
   background: rgba(10, 118, 104, 0.5);
