@@ -37,7 +37,6 @@ nav {
 }
 
 .dropdown {
-  display: none;
   position: relative;
   width: 100%;
   top: $tiny;
@@ -200,7 +199,7 @@ State
   }
 
   .dropdown {
-    display: block;
+    display: block !important;
     position: relative;
     top: 0;
     right: 0;
