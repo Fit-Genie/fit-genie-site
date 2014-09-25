@@ -454,6 +454,14 @@ nav {
   background-color: #04302b;
   background-color: rgba(10, 118, 104, 0.3); }
 
+.go-workout {
+  background-color: #06483f;
+  border: 1px solid #17575f;
+  margin-top: 0; }
+
+.go-workout:hover {
+  background-color: rgba(6, 71, 63, 0.3); }
+
 input {
   background: white;
   background: rgba(255, 255, 255, 0.2);
