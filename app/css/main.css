@@ -108,7 +108,7 @@ html {
   text-align: center; }
 
 .signup-link:hover, .signup-link:active {
-  color: #0a7768; }
+  color: #ffb866; }
 
 .signup fieldset {
   margin: 1.618rem 0; }
@@ -367,8 +367,43 @@ input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, 
 Module
 ********************************/
 nav {
-  background: #7bd4e0;
-  margin-bottom: 2rem; }
+  background: #0ea692;
+  margin-bottom: 1rem; }
+
+.dropdown-icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -1.618rem;
+  height: 6.854rem;
+  width: 6.854rem; }
+
+.dropdown-icon img {
+  margin: 1.618rem;
+  height: 1.618rem;
+  width: 1.618rem; }
+
+.dropdown {
+  position: relative;
+  width: 100%;
+  top: 0.381rem;
+  right: 0; }
+
+.dropdown-items {
+  list-style-type: none;
+  display: block;
+  width: 100%;
+  background: #2fb3c6;
+  font-size: 1rem;
+  border-bottom: 1px solid #258f9d;
+  padding: 0.618rem; }
+
+.dropdown-items:hover {
+  background: #258f9d; }
+
+.dropdown-items_link {
+  text-decoration: none;
+  color: white; }
 
 .user-login {
   display: none;
@@ -381,7 +416,7 @@ nav {
   float: right; }
 
 .logo {
-  color: #1b6974;
+  color: #b9e8ee;
   font-family: 'Arvo', serif;
   padding: 0 0.8rem;
   font-size: 1.618rem;
@@ -406,6 +441,12 @@ nav {
   margin: 1rem 0;
   font-size: 1rem; }
 
+<<<<<<< HEAD
+.btn-submit-inactive {
+  background-color: #04302b; }
+
+=======
+>>>>>>> 5b0028568e5f38834cbe00ff41e45a87dd77abca
 .btn-submit:hover, .btn-submit:active {
   background: #06483f;
   background: rgba(10, 118, 104, 0.5);
@@ -455,6 +496,24 @@ State
     float: left;
     display: inline-block;
     clear: none; } }
+
+@media (min-width: 710px) {
+  .dropdown-icon, .dropdown-icon img {
+    display: none; }
+  .dropdown {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%; }
+  .dropdown-list {
+    margin: 0 auto;
+    width: 100%; }
+  .dropdown-items {
+    border-bottom: none;
+    width: 20%;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center; } }
 
 @media (max-width: 640px) {
   .controls {
