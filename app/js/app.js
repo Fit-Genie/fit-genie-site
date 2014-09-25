@@ -52,5 +52,9 @@ fitApp.config(['$routeProvider', function($routeProvider) {
     })
     .otherwise({
       redirectTo: '/login'
+    })
+    .when('/track', {
+      templateUrl: 'views/track.html',
+      controller: 'TrackController'
     });
 }]);
