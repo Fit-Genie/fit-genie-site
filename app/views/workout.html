@@ -42,8 +42,8 @@
 		<p>{{minutes}}:{{seconds}}</p>
 	</section>
 	<div class="controls">
-		<button class="controls-button" ng-click="pause()">Pause</button>
-		<button class="controls-button" ng-click="resume()">Resume</button>
+		<button class="controls-button" ng-click="pause()" ng-hide="isPaused">Pause</button>
+		<button class="controls-button" ng-click="resume()" ng-show="isPaused">Resume</button>
 		<button class="controls-button">Cancel</button>
 	</div>
 	<div ng-class="{current: $first}" ng-repeat="workout in workouts" class="movement {{workout.type}}">

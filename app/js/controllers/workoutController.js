@@ -59,10 +59,14 @@ module.exports = function(app) {
 
    $scope.pause = function() {
     $timeout.cancel($scope.timeout);
+
+    $scope.isPaused = true;
   };
 
   $scope.resume = function() {
     $scope.countdown($scope.total);
+
+    $scope.isPaused = false;
   }
 
 });
