@@ -383,7 +383,6 @@ nav {
   width: 1.618rem; }
 
 .dropdown {
-  display: none;
   position: relative;
   width: 100%;
   top: 0.381rem;
@@ -432,7 +431,7 @@ nav {
   margin: 0 auto;
   text-align: center; }
 
-.preworkout {
+.big-top-margin {
   margin-top: 6.854rem; }
 
 .btn-submit {
@@ -509,7 +508,7 @@ State
   .dropdown-icon, .dropdown-icon img {
     display: none; }
   .dropdown {
-    display: block;
+    display: block !important;
     position: relative;
     top: 0;
     right: 0;
