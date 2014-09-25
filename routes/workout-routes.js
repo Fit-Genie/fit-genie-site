@@ -1,17 +1,20 @@
+'use strict';
 var Workout = require('../models/workout');
 
 module.exports = function(app, jwtauth) {
 	var baseUrl = '/api/v_0_0_1/workouts';
 
 	app.get(baseUrl, jwtauth, function(req, res) {
-		Workout.find({}, function(err, workouts) {
+		Workout.find({'user_id': req.user._id}, function(err, workouts) {
 			if(err) return res.status(500).json(err);
+			console.log('in routes ' + req.user.basic.username);
 			return res.json(workouts);
 		});
 	});
 
 	app.post(baseUrl, jwtauth, function(req, res) {
 		var workout = new Workout(req.body); //this is iffy
+		workout.user_id = req.user.id;
 		workout.save(function(err, resWorkout) { //this is iffy
 			if (err) return res.status(500).json(err);
 			return res.send(resWorkout);
@@ -34,4 +37,4 @@ module.exports = function(app, jwtauth) {
 		});
 	});
 
-}
+};
