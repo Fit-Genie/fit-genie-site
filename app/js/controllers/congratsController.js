@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-  app.controller('CongratsControllerø', function() {
+  app.controller('CongratsController', function() {
 
 
   });

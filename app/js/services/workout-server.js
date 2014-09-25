@@ -3,7 +3,7 @@
 module.exports = function(app) {
   app.factory('workoutServer', function($http) {
     var parseWorkout = function(workout) {
-      return {name: workout.name, type: workout.type, duration: workout.duration, description: workout.description };
+      return {name: workout.name, type: workout.type, minutes: workout.minutes, seconds: workout.seconds, description: workout.description };
     };
 
     var workout = {

@@ -89,11 +89,21 @@ html {
   color: white;
   height: 100%; }
 
+.form-login {
+  margin: 0 auto;
+  width: 320px; }
+
+.form-login input {
+  display: block;
+  margin: 1rem 0;
+  padding: 5%;
+  width: 100%; }
+
 .signup-link {
   margin-top: 1.618rem;
   font-size: 1.618rem;
   text-decoration: none;
-  color: #ff8a00;
+  color: #0ea692;
   display: block;
   text-align: center; }
 
@@ -111,6 +121,10 @@ html {
 .line input, .line button {
   width: 12rem;
   display: inline-block; }
+
+.required-info {
+  color: #cdcdcd;
+  text-align: center; }
 
 .congrats p {
   text-align: center;
@@ -427,14 +441,24 @@ nav {
   margin: 1rem 0;
   font-size: 1rem; }
 
+<<<<<<< HEAD
 .btn-submit-inactive {
   background-color: #04302b; }
 
+=======
+>>>>>>> 5b0028568e5f38834cbe00ff41e45a87dd77abca
 .btn-submit:hover, .btn-submit:active {
   background: #06483f;
   background: rgba(10, 118, 104, 0.5);
   color: white;
   cursor: pointer; }
+
+.btn-submit:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  color: #808080;
+  border: 1px solid #17575f;
+  background-color: #04302b;
+  background-color: rgba(10, 118, 104, 0.3); }
 
 input {
   background: white;

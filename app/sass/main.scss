@@ -106,16 +106,20 @@ nav {
   font-size: $small;
 }
 
-.btn-submit-inactive {
-  background-color: darken($dark-niagara, 15%);
-}
-
 .btn-submit:hover,
 .btn-submit:active {
   background: darken($dark-niagara, 10%);
   background: rgba($dark-niagara, 0.5);
   color: white;
   cursor: pointer;
+}
+
+.btn-submit:disabled {
+  color: rgba(#fff, 0.5);
+  color: darken(#fff, 50%);
+  border: 1px solid darken(#2fb3c6, 25%);
+  background-color: darken($dark-niagara, 15%);
+  background-color: rgba($dark-niagara, 0.3);
 }
 
 input {
