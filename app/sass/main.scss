@@ -69,7 +69,7 @@ nav {
 }
 
 .btn-submit:disabled {
-  color: rgba(#fff, 50%);
+  color: rgba(#fff, 0.5);
   color: darken(#fff, 50%);
   border: 1px solid darken(#2fb3c6, 25%);
   background-color: darken($dark-niagara, 15%);
