@@ -33,6 +33,23 @@
 .icon-angry:before {
   content: "\e604"; }
 
+.icon-info {
+  position: relative; }
+
+.icon-info span {
+  display: none; }
+
+.icon-info:hover span, .icon-info:active span {
+  display: block;
+  width: 18rem;
+  font-family: 'Ubuntu', sans-serif;
+  position: absolute;
+  top: -1rem;
+  right: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 6px; }
+
 .icon-info:before {
   content: "\e605"; }
 
@@ -72,6 +89,17 @@ html {
   color: white;
   height: 100%; }
 
+.signup-link {
+  margin-top: 1.618rem;
+  font-size: 1.618rem;
+  text-decoration: none;
+  color: #ff8a00;
+  display: block;
+  text-align: center; }
+
+.signup-link:hover, .signup-link:active {
+  color: #ffb866; }
+
 .signup fieldset {
   margin: 1.618rem 0; }
 
@@ -83,6 +111,10 @@ html {
 .line input, .line button {
   width: 12rem;
   display: inline-block; }
+
+.required-info {
+  color: #cdcdcd;
+  text-align: center; }
 
 .congrats p {
   text-align: center;
@@ -338,7 +370,6 @@ nav {
   width: 12rem;
   font-size: 1rem;
   padding: 0.2rem;
-  color: red;
   margin: 1rem 1rem 0 0; }
 
 .login {
