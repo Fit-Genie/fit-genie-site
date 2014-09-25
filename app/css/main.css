@@ -357,6 +357,7 @@ nav {
   margin-bottom: 1rem; }
 
 .dropdown-icon {
+  display: block;
   position: absolute;
   top: 0;
   right: -1.618rem;
@@ -369,7 +370,6 @@ nav {
   width: 1.618rem; }
 
 .dropdown {
-  display: none;
   position: relative;
   width: 100%;
   top: 0.381rem;
@@ -377,6 +377,7 @@ nav {
 
 .dropdown-items {
   list-style-type: none;
+  display: block;
   width: 100%;
   background: #2fb3c6;
   font-size: 1rem;
@@ -401,7 +402,7 @@ nav {
   float: right; }
 
 .logo {
-  color: #1b6974;
+  color: #b9e8ee;
   font-family: 'Arvo', serif;
   padding: 0 0.8rem;
   font-size: 1.618rem;
@@ -471,6 +472,24 @@ State
     float: left;
     display: inline-block;
     clear: none; } }
+
+@media (min-width: 710px) {
+  .dropdown-icon, .dropdown-icon img {
+    display: none; }
+  .dropdown {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%; }
+  .dropdown-list {
+    margin: 0 auto;
+    width: 100%; }
+  .dropdown-items {
+    border-bottom: none;
+    width: 20%;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center; } }
 
 @media (max-width: 640px) {
   .controls {
