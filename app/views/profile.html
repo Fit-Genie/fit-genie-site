@@ -1,4 +1,4 @@
-<div ng-controller="ProfileController" class="signup container">
+<div ng-controller="ProfileController">
 <!-- Nav Structure Starts Here -->
   <nav>
     <h1 class="logo">
@@ -38,22 +38,23 @@
     </div>
   </nav>
 <!-- Nav Structure Ends -->
+<div class="signup container">
   <h1 class="centered">My Profile</h1>
   <form name="newuserform">
-<!--       <fieldset>
-  <div class="line">
-    <label>Login</label>
-    <input type="text" required data-ng-model="user.username" placeholder="username"/>
-  </div>
-  <div class="line">
-    <label>Password</label>
-    <input type="password" required data-ng-model="user.password" placeholder="password"/>
-  </div>
-  <div class="line">
-    <label>Confirm Password</label>
-    <input type="password" required data-ng-model="user.passwordConfirmation" placeholder="password confirmation"/>
-  </div>
-</fieldset> -->
+    <fieldset>
+      <div class="line">
+        <label>Login</label>
+        <input type="text" required data-ng-model="user.username" placeholder="username"/>
+      </div>
+      <div class="line">
+        <label>Password</label>
+        <input type="password" required data-ng-model="user.password" placeholder="password"/>
+      </div>
+      <div class="line">
+        <label>Confirm Password</label>
+        <input type="password" required data-ng-model="user.passwordConfirmation" placeholder="password confirmation"/>
+      </div>
+      </fieldset>
       <fieldset>
         <div class="line">
           <label>Name</label>
@@ -75,3 +76,4 @@
       </div>
     </form>
   </div>
+</div>
