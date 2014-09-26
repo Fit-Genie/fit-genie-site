@@ -26,6 +26,8 @@ require('./routes/user-routes')(app, passport);
 
 var server = http.createServer(app);
 
-server.listen(process.env.PORT || 3000, function() {
-	console.log('server running on port 3000');
+app.set('port', process.env.PORT || 3000);
+
+server.listen(app.get('port'), function() {
+  console.log('the server is NOW running on port', app.get('port'));
 });
