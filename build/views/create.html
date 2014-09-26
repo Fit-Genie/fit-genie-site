@@ -1,13 +1,13 @@
 <div ng-controller="CreateCtrl">
 	<!-- Nav Structure Starts Here -->
-  <nav>
+ <nav>
     <h1 class="logo">
       FitGenie
     </h1>
-    <div class="dropdown-icon" >
+    <div class="dropdown-icon" ng-click="isNavOpen = !isNavOpen">
       <img src="img/dropdown-img.svg"/>
     </div>
-    <div class="dropdown">
+    <div class="dropdown" ng-show="isNavOpen">
       <ul class="dropdown-list">
         <li class="dropdown-items">
           <a href="#profile" class="dropdown-items_link">
