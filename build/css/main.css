@@ -1,0 +1,537 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?gefpod');
+  src: url('../fonts/icomoon.eot?#iefixgefpod') format('embedded-opentype'), url('../fonts/icomoon.woff?gefpod') format('woff'), url('../fonts/icomoon.ttf?gefpod') format('truetype'), url('../fonts/icomoon.svg?gefpod#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  float: right;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-happy:before {
+  content: "\e600"; }
+
+.icon-smiley:before {
+  content: "\e601"; }
+
+.icon-sad:before {
+  content: "\e602"; }
+
+.icon-grin:before {
+  content: "\e603"; }
+
+.icon-angry:before {
+  content: "\e604"; }
+
+.icon-info {
+  position: relative; }
+
+.icon-info span {
+  display: none; }
+
+.icon-info:hover span, .icon-info:active span {
+  display: block;
+  width: 18rem;
+  font-family: 'Ubuntu', sans-serif;
+  position: absolute;
+  top: -1rem;
+  right: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 6px; }
+
+.icon-info:before {
+  content: "\e605"; }
+
+.icon-cancel-circle:before {
+  content: "\e606"; }
+
+/* Colors
+****************************/
+/* Type Size Variables
+****************************/
+* {
+  box-sizing: border-box; }
+
+html, body, div, span, h1, h2, p, a, img, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, time {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 18px;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+footer, header, nav, section {
+  display: block; }
+
+body {
+  height: 100%;
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+html {
+  background: #04302b;
+  background: url(../img/bg.png) repeat;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  height: 100%; }
+
+.form-login {
+  margin: 0 auto;
+  width: 320px; }
+
+.form-login input {
+  display: block;
+  margin: 1rem 0;
+  padding: 5%;
+  width: 100%; }
+
+.signup-link {
+  margin-top: 1.618rem;
+  font-size: 1.618rem;
+  text-decoration: none;
+  color: #0ea692;
+  display: block;
+  text-align: center; }
+
+.signup-link:hover, .signup-link:active {
+  color: #0a7768; }
+
+.signup fieldset {
+  margin: 1.618rem 0; }
+
+.line label {
+  display: inline-block;
+  text-align: right;
+  width: 10rem; }
+
+.line input, .line button {
+  width: 12rem;
+  display: inline-block; }
+
+.required-info {
+  color: #cdcdcd;
+  text-align: center; }
+
+.congrats p {
+  text-align: center;
+  font-size: 1.618rem;
+  margin: 2.618rem 0 1.618rem;
+  display: block; }
+
+.congrats input {
+  margin: 0 auto 1.618rem;
+  width: 310px;
+  display: block; }
+
+.congrats button {
+  width: 320px; }
+
+.congrats textarea {
+  margin: 0 auto;
+  width: 320px;
+  font-size: 1rem;
+  text-align: left;
+  padding: 1rem; }
+
+.happy-meter {
+  width: 320px; }
+
+.calendar {
+  width: 100%;
+  border-spacing: 0;
+  margin: 1.618rem 0; }
+
+.calendar tr, th, td {
+  border-top: 1px solid #0ea692;
+  width: 14%;
+  padding-top: 0;
+  text-align: center;
+  vertical-align: top;
+  font-size: 1rem; }
+
+.calendar td {
+  height: 6.854rem; }
+
+.calendar th {
+  color: #FFF;
+  height: 1.618rem;
+  border: 0;
+  background: #06483f;
+  background: rgba(14, 166, 146, 0.2); }
+
+.calendar-today {
+  background: #06483f;
+  background: rgba(14, 166, 146, 0.2); }
+
+.data {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 2.618rem; }
+
+.track-whole {
+  color: #0ea692; }
+
+.track-partial {
+  color: #258f9d; }
+
+.track-zero {
+  color: #ff8a00; }
+
+.track-future {
+  color: rgba(47, 179, 198, 0.2); }
+
+/* General timer style, and color changes for current movement */
+.timer {
+  color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Droid Sans Mono', Monaco, monospace;
+  font-size: 10rem;
+  text-align: center;
+  padding: 3rem 0 1rem 0; }
+
+/* .timer.warmup {
+  color: \$pizazz;
+}
+
+.timer.core {
+  color: \$niagara;
+}
+
+.timer.cooldown {
+  color: \$scooter;
+}
+ */
+/* General movement styles */
+.movement {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.618rem;
+  color: #999;
+  color: rgba(255, 255, 255, 0.5);
+  background: #545454;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 4px solid;
+  margin-bottom: 0.4rem;
+  padding: 1.4rem; }
+
+/* Changes background color of current movement */
+.current {
+  color: white; }
+
+.current.warmup {
+  background: #663600;
+  background: rgba(255, 138, 0, 0.3); }
+
+.current.core {
+  background: #021916;
+  background: rgba(14, 166, 146, 0.3); }
+
+.current.cooldown {
+  background: #12444a;
+  background: rgba(47, 179, 198, 0.3); }
+
+/* Border colors for different workout sections */
+.warmup {
+  border-top-color: #ff8a00; }
+
+.core {
+  border-top-color: #0ea692; }
+
+.cooldown {
+  border-top-color: #2fb3c6; }
+
+/* Sticky workout controls for mobile */
+.controls {
+  text-align: center;
+  height: 4rem;
+  background: none;
+  margin-bottom: 2rem; }
+
+.controls-button {
+  font-size: 1.618rem;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 6px;
+  margin: 0.5rem;
+  background: black;
+  background: rgba(0, 0, 0, 0.3);
+  outline: none;
+  border: none;
+  color: white; }
+
+.controls-button:hover, .controls-button:active {
+  background: black;
+  background: rgba(0, 0, 0, 0.6);
+  color: #7bd4e0; }
+
+/* Workout Builder page styles */
+input.exercise-name, input.workout-name {
+  width: 100%;
+  height: 1.618rem; }
+
+input.exercise-name, .exercise-type_select, .exercise-duration, .exercise-info, input.workout-name {
+  background: white;
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+  color: white;
+  height: 1.618rem;
+  padding: 0.382em;
+  font-size: 1rem; }
+
+.exercise-type_select {
+  float: right;
+  width: 70%;
+  margin-top: 4px;
+  padding: 5px;
+  line-height: 1;
+  border: 0; }
+
+.exercise-type_container, .exercise-duration_container {
+  height: 2.618rem;
+  float: left;
+  clear: both; }
+
+.exercise-type_container, .exercise-duration_container {
+  width: 100%;
+  display: block; }
+
+.exercise-duration_label, .exercise-type_label {
+  width: 29%;
+  float: left; }
+
+.exercise-duration_label, .exercise-duration, .exercise-type_label {
+  display: inline-block; }
+
+.exercise-durations {
+  width: 70%;
+  clear: both; }
+
+.exercise-duration {
+  width: 34%;
+  padding: 0 0 0 0.382em;
+  margin: 2px 2px 0 2px; }
+
+.exercise-info {
+  width: 100%;
+  height: 4.236rem;
+  margin-top: 0.382rem; }
+
+.profile {
+  width: 6.854rem; }
+
+.incomplete-form {
+  border: 1px solid #ff8a00; }
+
+.congrats p {
+  text-align: center;
+  font-size: 1.618rem;
+  margin: 2.618rem 0 1.618rem;
+  display: block; }
+
+.congrats input {
+  margin: 0 auto 1.618rem;
+  width: 310px;
+  display: block; }
+
+.congrats button {
+  width: 320px; }
+
+.congrats textarea {
+  margin: 0 auto;
+  width: 320px;
+  font-size: 1rem;
+  text-align: left;
+  padding: 1rem; }
+
+.happy-meter {
+  width: 320px; }
+
+/*******************************
+Module
+********************************/
+nav {
+  background: #0ea692;
+  margin-bottom: 1rem; }
+
+.dropdown-icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -1.618rem;
+  height: 6.854rem;
+  width: 6.854rem; }
+
+.dropdown-icon img {
+  margin: 1.618rem;
+  height: 1.618rem;
+  width: 1.618rem; }
+
+.dropdown {
+  position: relative;
+  width: 100%;
+  top: 0.381rem;
+  right: 0; }
+
+.dropdown-items {
+  list-style-type: none;
+  display: block;
+  width: 100%;
+  background: #2fb3c6;
+  font-size: 1rem;
+  border-bottom: 1px solid #258f9d;
+  padding: 0.618rem; }
+
+.dropdown-items:hover {
+  background: #258f9d; }
+
+.dropdown-items_link {
+  text-decoration: none;
+  color: white; }
+
+.user-login {
+  display: none;
+  width: 12rem;
+  font-size: 1rem;
+  padding: 0.2rem;
+  margin: 1rem 1rem 0 0; }
+
+.login {
+  float: right; }
+
+.logo {
+  color: #b9e8ee;
+  font-family: 'Arvo', serif;
+  padding: 0 0.8rem;
+  font-size: 1.618rem;
+  display: inline-block; }
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  color: white;
+  line-height: 2.618rem; }
+
+.centered {
+  margin: 0 auto;
+  text-align: center; }
+
+.big-top-margin {
+  margin-top: 6.854rem; }
+
+.btn-submit {
+  width: 100%;
+  height: 2.618rem;
+  background-color: #0a7768;
+  color: #FFF;
+  border: 1px solid #2fb3c6;
+  margin: 1rem 0;
+  font-size: 1rem; }
+
+.btn-submit:hover, .btn-submit:active {
+  background: #06483f;
+  background: rgba(10, 118, 104, 0.5);
+  color: white;
+  cursor: pointer; }
+
+.btn-submit:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  color: #808080;
+  border: 1px solid #17575f;
+  background-color: #04302b;
+  background-color: rgba(10, 118, 104, 0.3); }
+
+.btn-small {
+  width: 50%; }
+
+.go-workout {
+  background-color: #06483f;
+  border: 1px solid #17575f;
+  margin-top: 0; }
+
+.go-workout:hover {
+  background-color: rgba(6, 71, 63, 0.3); }
+
+input {
+  background: white;
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+  color: white;
+  height: 1.618rem;
+  padding: 0.381rem;
+  font-size: 1rem; }
+
+/* Heading & Text Style
+****************************/
+h1 {
+  font-size: 2.618rem;
+  line-height: 4.236rem;
+  color: #2fb3c6; }
+
+h2 {
+  font-size: 1.618rem;
+  line-height: 2.618rem; }
+
+/*******************************
+State
+********************************/
+@media (min-width: 641px) {
+  .signup form {
+    margin-left: 6rem; }
+  .user-login {
+    display: inline; }
+  .movement {
+    border-radius: 6px; }
+  .exercise-type_container, .exercise-duration_container {
+    width: 47%;
+    margin: 0 4px;
+    float: left;
+    display: inline-block;
+    clear: none; } }
+
+@media (min-width: 710px) {
+  .dropdown-icon, .dropdown-icon img {
+    display: none; }
+  .dropdown {
+    display: block !important;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%; }
+  .dropdown-list {
+    margin: 0 auto;
+    width: 100%; }
+  .dropdown-items {
+    border-bottom: none;
+    width: 20%;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center; } }
+
+@media (max-width: 640px) {
+  .controls {
+    position: fixed;
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    background: rgba(70, 101, 106, 0.9); }
+  .controls-button {
+    border-radius: 0; }
+  .timer {
+    padding-bottom: 3rem; } }

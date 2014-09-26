@@ -1,0 +1,11 @@
+<div ng-controller="LoginController" class="container">
+  <h1 class="centered big-top-margin">FitGenie</h1>
+  <h2 class="centered">Sign In</h2>
+  <form name="userform" data-ng-hide="newuser" class="form-login">
+    <input type="text" required ng-model="user.username" placeholder="username">
+    <input type="password" required ng-model="user.password" placeholder="password">
+    <button data-ng-disabled="userform.$invalid" ng-click="login()" class="btn-submit">Login</button>
+  </form>
+
+  <a href="/#/signup" class="signup-link">Create a New Account</a>
+</div>

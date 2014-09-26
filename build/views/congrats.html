@@ -1,0 +1,58 @@
+<div ng-controller="CongratsController">
+<!-- Nav Structure Starts Here -->
+  <nav>
+    <h1 class="logo">
+      FitGenie
+    </h1>
+    <div class="dropdown-icon" >
+      <img src="img/dropdown-img.svg"/>
+    </div>
+    <div class="dropdown">
+      <ul class="dropdown-list">
+        <li class="dropdown-items">
+          <a href="#profile" class="dropdown-items_link">
+            View Profile
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#workout" class="dropdown-items_link">
+            My Workout
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#create" class="dropdown-items_link">
+            Edit Workout
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#track" class="dropdown-items_link">
+            Progress Tracker
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#login" class="dropdown-items_link">
+            Sign Out
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- Nav Structure Ends -->
+<section class="congrats container">
+  <h1 class="centered">Congratulations, You're Finished!</h1>
+  <p>How are you feeling?</p>
+  <section class="happy-meter centered">
+    <img src="img/happiness-level.svg" alt="happy faces representing current mood">
+    <input type="range" min="1" max="5" value="3" step="1" list="level">
+    <datalist id="level">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </datalist>
+    <textarea class="centered" name="" id="" cols="30" rows="10" placeholder="Add any additional notes you'd like to share about the workout."></textarea>
+    <a href="#/track"><button class="btn-submit centered">Submit</button></a>
+  </section>
+</section>
+</div>
