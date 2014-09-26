@@ -18,7 +18,7 @@ userSchema.methods.generateHash = function(password) {
 
 userSchema.methods.validPassword = function(password) {
 	return bcrypt.compareSync(password, this.basic.password);
-}
+};
 
 userSchema.methods.createToken = function(app) {
 	var expires = moment().add(7, 'days').valueOf();

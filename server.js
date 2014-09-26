@@ -12,8 +12,8 @@ mongoose.connect('mongodb://john:doe@kahana.mongohq.com:10040/app30025578');
 app.use(express.static(__dirname + (process.env.STATIC_DIR || '/build')));
 
 
-app.set('jwtTokenSecret', process.env.JWT_SECRET || 'developmentsecret')
-app.set('secret', process.env.SECRET || 'developmentsecret')
+app.set('jwtTokenSecret', process.env.JWT_SECRET || 'developmentsecret');
+app.set('secret', process.env.SECRET || 'developmentsecret');
 
 app.use(passport.initialize());
 

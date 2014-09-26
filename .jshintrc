@@ -10,7 +10,8 @@
     "after"      : false,
     "afterEach"  : false,
     "equal"      : false,
-    "angular"    : false
+    "angular"    : false,
+    "$location"  : false
   },
   "node": true,
   "globalstrict": true,
