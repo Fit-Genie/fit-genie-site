@@ -1,0 +1,58 @@
+<div ng-controller="WorkoutCtrl">
+<!-- Nav Structure Starts Here -->
+  <nav>
+    <h1 class="logo">
+      FitGenie
+    </h1>
+    <div class="dropdown-icon" >
+      <img src="img/dropdown-img.svg"/>
+    </div>
+    <div class="dropdown">
+      <ul class="dropdown-list">
+        <li class="dropdown-items">
+          <a href="#profile" class="dropdown-items_link">
+            View Profile
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#workout" class="dropdown-items_link">
+            My Workout
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#create" class="dropdown-items_link">
+            Edit Workout
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#track" class="dropdown-items_link">
+            Progress Tracker
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#login" class="dropdown-items_link">
+            Sign Out
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- Nav Structure Ends -->
+	<section class="timer {{workouts.type}}">
+		<p>{{minutes}}:{{seconds}}</p>
+	</section>
+	<div class="controls">
+		<button class="controls-button" ng-click="pause()" ng-hide="isPaused">Pause</button>
+		<button class="controls-button" ng-click="resume()" ng-show="isPaused">Resume</button>
+		<button class="controls-button">Cancel</button>
+	</div>
+	<div ng-class="{current: $first}" ng-repeat="workout in workouts" class="movement {{workout.type}}">
+		<span>{{workout.name}}</span>
+		<!-- <span ng-click="showDescription()">?</span>
+	 		{{workout.type}}
+			{{workout.duration}} -->
+		<span class="icon-info">
+			<span>{{workout.description}}</span>
+		</span>
+	</div>
+</div>

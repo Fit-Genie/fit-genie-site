@@ -1,0 +1,50 @@
+<div ng-controller="PreWorkoutController">
+<!-- Nav Structure Starts Here -->
+  <nav>
+    <h1 class="logo">
+      FitGenie
+    </h1>
+    <div class="dropdown-icon" ng-click="isNavOpen = !isNavOpen">
+      <img src="img/dropdown-img.svg"/>
+    </div>
+    <div class="dropdown" ng-show="isNavOpen">
+      <ul class="dropdown-list">
+        <li class="dropdown-items">
+          <a href="#profile" class="dropdown-items_link">
+            View Profile
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#workout" class="dropdown-items_link">
+            My Workout
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#create" class="dropdown-items_link">
+            Edit Workout
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#track" class="dropdown-items_link">
+            Progress Tracker
+          </a>
+        </li><!--
+        --><li class="dropdown-items">
+          <a href="#login" class="dropdown-items_link">
+            Sign Out
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- Nav Structure Ends -->
+  <section class="container centered big-top-margin">
+    <h1>Welcome to FitGenie!</h1>
+    <h2>What would you like to do today?</h2>
+    <a href="#/create">
+      <button type="button" class="btn-submit btn-small">
+        Build My Workout
+      </button>
+    </a>
+  </section>
+</div>
