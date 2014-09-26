@@ -15,7 +15,6 @@ module.exports = function(app) {
         var min = $scope.workouts[0].minutes;
         var sec = $scope.workouts[0].seconds;
         var total = sec + min*60;
-        console.log(total);
         $scope.countdown(total);
           //i--;
       //}
@@ -26,10 +25,10 @@ module.exports = function(app) {
 
     $scope.countdown = function(total) {
       if(total > -1) {
-        $scope.minutes = Math.floor(total/60)
-        var sec = total - $scope.minutes * 60
+        $scope.minutes = Math.floor(total/60);
+        var sec = total - $scope.minutes * 60;
         if(sec < 10) {
-          $scope.seconds = "0" + sec;
+          $scope.seconds = '0' + sec;
         }
         else
           $scope.seconds = sec;
@@ -50,8 +49,8 @@ module.exports = function(app) {
        $scope.countdown(total);
      }
      if($scope.workouts.length === 0)
-      window.location.replace("/#/congrats");
-   }
+      $location.replace('/#/congrats');
+   };
 
 
    $scope.pause = function() {
@@ -64,7 +63,7 @@ module.exports = function(app) {
     $scope.countdown($scope.total);
 
     $scope.isPaused = false;
-  }
+  };
 
 });
 };

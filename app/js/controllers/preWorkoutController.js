@@ -3,4 +3,4 @@ module.exports = function(app) {
   	console.log($cookies.jwt);
     $http.defaults.headers.common['jwt'] = $cookies.jwt;
   });
-}
+};
